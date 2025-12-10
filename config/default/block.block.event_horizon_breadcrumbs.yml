@@ -1,0 +1,22 @@
+uuid: ab4355b2-e52b-4751-a4cd-9fdc7d9bfb1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 1-r8axn92xJSaooo5XrdDJUwUU3cNCuZT1_orS2XJZE
+id: event_horizon_breadcrumbs
+theme: event_horizon
+region: content_above
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,39 @@
+uuid: 83d9f10d-8b4e-4ad9-8be2-6d44d096dabc
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_platform_sessions
+    - moderation_state_condition
+    - node
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: ep6_gHFG4Xi9-Y_8D_F_kGETEts9UMLUwql1-vBtd94
+id: event_horizon_sessionconfirmation
+theme: event_horizon
+region: content_above
+weight: 0
+provider: null
+plugin: event_platform_sessions_confirmation
+settings:
+  id: event_platform_sessions_confirmation
+  label: 'Session Confirmation'
+  label_display: visible
+  provider: event_platform_sessions
+  message: 'Please confirm whether or not you will be able to deliver this session as proposed.'
+visibility:
+  node_moderation_state_condition_moderation_state:
+    id: node_moderation_state_condition_moderation_state
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    moderation_states:
+      accepted: accepted
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      session: session

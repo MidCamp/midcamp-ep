@@ -1,0 +1,27 @@
+uuid: 502aca5c-4213-41c0-8646-8f32c70b66a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 5x4nTINy1pKYgd8MCY9kcUimR4Jkk7NImwtMwAvd7nY
+id: event_horizon_main_menu
+theme: event_horizon
+region: primary_menu
+weight: -11
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

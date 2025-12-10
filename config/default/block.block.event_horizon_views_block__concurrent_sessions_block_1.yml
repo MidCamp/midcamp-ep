@@ -1,0 +1,45 @@
+uuid: a978d290-932e-4cfc-b72d-52d074b9e202
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.concurrent_sessions
+  module:
+    - moderation_state_condition
+    - node
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: bNfgj92IAgcIwxnBXbMlIMG2qjkhdP2FHO4DlkWaRl8
+id: event_horizon_views_block__concurrent_sessions_block_1
+theme: event_horizon
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:concurrent_sessions-block_1'
+settings:
+  id: 'views_block:concurrent_sessions-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping:
+    nid: '@node.node_route_context:node'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      session: session
+  node_moderation_state_condition_moderation_state:
+    id: node_moderation_state_condition_moderation_state
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    moderation_states:
+      published: published
+      accepted: accepted

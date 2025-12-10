@@ -1,0 +1,16 @@
+uuid: 61ea1bfb-6f68-4489-b5cb-925b4ab5a189
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.speaker
+  module:
+    - user
+_core:
+  default_config_hash: qIFTiI7oO2fK9b5i4eX6qqmyBloDBZsVhxQNvI20sIE
+id: user_add_role_action.speaker
+label: 'Add the Speaker role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: speaker

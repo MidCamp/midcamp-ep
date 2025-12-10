@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: n6TQ3w-5c1NftZFc7HZyRjRqMNUzJjhilPwyDyYBBTM
+include_forms:
+  - block_admin_display_form
+  - bpmn_io_modeller
+  - drupal_upgrade_status_summary_form
+  - system_modules
+  - system_modules_uninstall
+  - user_admin_permissions
+exclude_forms:
+  - ''
