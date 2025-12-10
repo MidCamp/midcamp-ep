@@ -1,0 +1,50 @@
+uuid: 536f0e88-bf47-4133-bef1-03f7a18fa8e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+    - storage.storage_type.sponsorship
+  module:
+    - captcha
+    - coffee
+    - comment
+    - contact
+    - field_permissions
+    - file
+    - filter
+    - flag
+    - honeypot
+    - media
+    - search
+    - shortcut
+    - storage
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access coffee'
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'bypass honeypot protection'
+  - 'delete own files'
+  - 'flag my_schedule'
+  - 'post comments'
+  - 'search content'
+  - 'skip CAPTCHA'
+  - 'skip comment approval'
+  - 'unflag my_schedule'
+  - 'use text format basic_html'
+  - 'use text format webform_default'
+  - 'view field_r'
+  - 'view field_time_slot'
+  - 'view media'
+  - 'view published sponsorship storage entities'

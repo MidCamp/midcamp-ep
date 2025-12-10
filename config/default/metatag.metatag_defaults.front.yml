@@ -1,0 +1,13 @@
+uuid: 7dbdcb59-a330-4e0e-bd68-889bcda7cc70
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  og_url: '[site:url]'
+  shortlink: '[site:url]'
+  title: '[site:name] | [config_page:event_details:field_current:entity:field_dates] | [config_page:event_details:field_current:entity:field_location_short]'

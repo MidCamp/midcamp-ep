@@ -1,0 +1,22 @@
+uuid: d2cfb08d-8241-48f1-b69b-2515b05fc322
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 4k7zRuxwRInhAA6PUf-sDNpn1P3UX9k9rQmv7X_MUKI
+id: event_horizon_content
+theme: event_horizon
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

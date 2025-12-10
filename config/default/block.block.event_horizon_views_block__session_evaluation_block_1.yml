@@ -1,0 +1,52 @@
+uuid: 520bed2e-d923-4842-9014-b4c9837d04e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_evaluation
+  module:
+    - moderation_state_condition
+    - node
+    - user
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: BfqncoFKghc26FYizdbWN6VIToc1SE8XYVlSsQFyyao
+id: event_horizon_views_block__session_evaluation_block_1
+theme: event_horizon
+region: content_above
+weight: -7
+provider: null
+plugin: 'views_block:session_evaluation-block_1'
+settings:
+  id: 'views_block:session_evaluation-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      session_moderator: session_moderator
+      administrator: administrator
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      session: session
+  node_moderation_state_condition_moderation_state:
+    id: node_moderation_state_condition_moderation_state
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    moderation_states:
+      proposed: proposed

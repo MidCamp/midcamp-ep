@@ -1,0 +1,22 @@
+uuid: 069749ee-d330-440e-936e-87f9c6e2e289
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_platform_details
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 3Q2gxBOt6Wn91xGj8_UTivCgHS39mD7f0S3coRTyqeI
+id: event_horizon_copyright
+theme: event_horizon
+region: footer
+weight: -12
+provider: null
+plugin: event_platform_details_copyright
+settings:
+  id: event_platform_details_copyright
+  label: Copyright
+  label_display: '0'
+  provider: event_platform_details
+visibility: {  }

@@ -1,0 +1,57 @@
+uuid: a87336b3-d44b-4551-8401-1c012bbc2ef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.thumbnail
+    - media.type.svg_image
+  module:
+    - hide_revision_field
+    - svg_image
+_core:
+  default_config_hash: jZjgtY49s-hqyIAMN42-MR1Gi43lmpHbHFqrZ4CKFOg
+id: media.svg_image.media_library
+targetEntityType: media
+bundle: svg_image
+mode: media_library
+content:
+  field_media_svg_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log_message:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  publish_on: true
+  publish_state: true
+  status: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true

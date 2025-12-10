@@ -1,0 +1,33 @@
+uuid: 2857ae28-30d6-4b90-a855-699c0100a63f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - storage.storage_type.sponsorship
+  module:
+    - comment
+    - contact
+    - field_permissions
+    - filter
+    - media
+    - search
+    - storage
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view field_r'
+  - 'view field_time_slot'
+  - 'view media'
+  - 'view published sponsorship storage entities'

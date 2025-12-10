@@ -1,0 +1,22 @@
+uuid: 88b08de3-affc-41b1-9062-8693ff707c39
+langcode: en
+status: true
+dependencies:
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: QDrD0HLAZcCDG_PbBmfeXBT1e2X9zxH_uhXl1R6OkJo
+id: event_horizon_secondary_local_tasks
+theme: event_horizon
+region: highlighted
+weight: -10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

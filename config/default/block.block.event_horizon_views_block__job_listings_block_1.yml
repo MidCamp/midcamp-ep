@@ -1,0 +1,35 @@
+uuid: d5015b53-096e-493b-9515-c75a41a8892c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.job_listings
+  module:
+    - node
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: vcBEpCq7fZ0wFry8dVc8J77rNLDUrF5frYLr4Hd18fE
+id: event_horizon_views_block__job_listings_block_1
+theme: event_horizon
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:job_listings-block_1'
+settings:
+  id: 'views_block:job_listings-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sponsor: sponsor

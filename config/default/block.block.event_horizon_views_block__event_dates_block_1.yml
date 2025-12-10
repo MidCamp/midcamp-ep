@@ -1,0 +1,36 @@
+uuid: 29c2947b-6c33-44b9-89e9-d2b43ab2b6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_dates
+  module:
+    - taxonomy
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 9R_yBum7XBk1F4K0n8cJYwb4uIuT7OSFXQd4nRn2fsc
+id: event_horizon_views_block__event_dates_block_1
+theme: event_horizon
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:event_dates-block_1'
+settings:
+  id: 'views_block:event_dates-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping:
+    tid: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      event: event

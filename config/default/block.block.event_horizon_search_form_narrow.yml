@@ -1,0 +1,23 @@
+uuid: 70515f8d-c0e1-423f-8a7f-bf1a94f383ff
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: '-RmLCtTQTgoMKRhpZg64TianleLNJ9-SeYKGKiXLD_U'
+id: event_horizon_search_form_narrow
+theme: event_horizon
+region: primary_menu
+weight: -8
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

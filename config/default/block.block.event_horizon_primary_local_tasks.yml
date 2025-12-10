@@ -1,0 +1,22 @@
+uuid: 1a3952c5-4f41-4005-bff7-3b6897e42322
+langcode: en
+status: true
+dependencies:
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 4OG6hWy-6xFTWnkk8TEGvYQ1UfI9HUbg4HqTFQbUPS4
+id: event_horizon_primary_local_tasks
+theme: event_horizon
+region: highlighted
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

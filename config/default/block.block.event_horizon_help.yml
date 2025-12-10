@@ -1,0 +1,22 @@
+uuid: 374850fa-2eb6-49f8-8a90-0e932398fe91
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: rGLw4h9819zCqMRLf_XXykgaDcSc7rHBsdnkDAxRSJg
+id: event_horizon_help
+theme: event_horizon
+region: content_above
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

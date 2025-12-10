@@ -1,0 +1,35 @@
+uuid: 900b656c-e957-43ed-b467-9cc27b68ccfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_speakers
+  module:
+    - taxonomy
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: ggzUgAFgNiUsOYr-n8NPOPGu4Tlsb48jCfWqv6R2dI4
+id: event_horizon_views_block__featured_speakers_block_1
+theme: event_horizon
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:featured_speakers-block_1'
+settings:
+  id: 'views_block:featured_speakers-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping: {  }
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      event: event

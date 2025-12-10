@@ -1,0 +1,20 @@
+uuid: 452d26a4-5327-44c1-a4eb-1aa1f781c47f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: 9Vw0BUhtxKy4GODx8QAfterM_34DnZeiUDcII94VvfU
+id: event_horizon_page_title
+theme: event_horizon
+region: content_above
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

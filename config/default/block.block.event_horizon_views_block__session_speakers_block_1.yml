@@ -1,0 +1,46 @@
+uuid: 051dd54b-bb7f-4778-9b53-3d3cd82a1e5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_speakers
+  module:
+    - moderation_state_condition
+    - node
+    - views
+  theme:
+    - event_horizon
+_core:
+  default_config_hash: OIlFcctR2ZhSr14Oyc23EPd0i4Sx6UrOTbLFev-uCMU
+id: event_horizon_views_block__session_speakers_block_1
+theme: event_horizon
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:session_speakers-block_1'
+settings:
+  id: 'views_block:session_speakers-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+  context_mapping: {  }
+visibility:
+  node_moderation_state_condition_moderation_state:
+    id: node_moderation_state_condition_moderation_state
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    moderation_states:
+      published: published
+      accepted: accepted
+      declined: declined
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      bof: bof
+      session: session

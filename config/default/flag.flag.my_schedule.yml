@@ -1,0 +1,34 @@
+uuid: 22ab513d-e96c-47cd-b508-52e5003c7a75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lpO9jV6wCU-Afc9aahLGO_XgUqSPjSxZtDoKzj4gZSU
+id: my_schedule
+label: 'My Schedule'
+bundles:
+  - bof
+  - session
+  - bof
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Add to my schedule'
+flag_long: ''
+flag_message: 'Added to my schedule'
+unflag_short: 'Remove from my schedule'
+unflag_long: ''
+unflag_message: 'Removed from my schedule'
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

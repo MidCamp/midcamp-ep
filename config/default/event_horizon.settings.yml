@@ -1,0 +1,28 @@
+_core:
+  default_config_hash: EB4EyjwlPseuUk8fRdYL5N8WRXcY1BvOXXZMGxea2xM
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://fldc25-logo.svg'
+  use_default: true
+base_primary_color: '#953c96'
+base_secondary_color: '#0961a5'
+graphic:
+  path: null
+  use_default: true
+texture:
+  path: null
+  use_default: true
+video:
+  path: null
+  use_default: true
+video_poster:
+  path: null
+default_graphic: true
+default_texture: true
+default_video: true
