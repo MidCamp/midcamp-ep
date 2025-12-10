@@ -1,15 +1,17 @@
 _core:
   default_config_hash: EB4EyjwlPseuUk8fRdYL5N8WRXcY1BvOXXZMGxea2xM
 favicon:
-  use_default: true
+  mimetype: image/svg+xml
+  path: themes/custom/midcamp_event_horizon/logo.svg
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://fldc25-logo.svg'
-  use_default: true
+  path: themes/custom/midcamp_event_horizon/logo.svg
+  use_default: false
 base_primary_color: '#953c96'
 base_secondary_color: '#0961a5'
 graphic:
@@ -24,5 +26,9 @@ video:
 video_poster:
   path: null
 default_graphic: true
+graphic_path: 'public://midcamp-drop-room-social.jpeg'
 default_texture: true
+texture_path: themes/custom/midcamp_event_horizon/images/crosshatch.svg
 default_video: true
+video_path: ''
+video_poster_path: themes/custom/midcamp_event_horizon/images/drop-room.jpg
