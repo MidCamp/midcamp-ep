@@ -8,6 +8,12 @@
  * It contains some defaults that the amazee.io team suggests, please edit them as required.
  */
 
+// Defines where the sync folder of your configuration lives. In this case it's inside
+// the Drupal root, which is protected by amazee.io Nginx configs, so it cannot be read
+// via the browser. If your Drupal root is inside a subfolder (like 'web') you can put the config
+// folder outside this subfolder for an advanced security measure: '../config/sync'.
+$settings['config_sync_directory'] = '../config/sync';
+
 if (getenv('LAGOON_ENVIRONMENT_TYPE') !== 'main') {
     /**
      * Skip file system permissions hardening.

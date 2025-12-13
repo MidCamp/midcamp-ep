@@ -92,3 +92,7 @@
 *.sql
 *.sql.gz
 /.drush-lock-update
+
+# Lagoon stuff
+/web/sites/default/default.development.services.yml
+/web/sites/default/all.settings.php
