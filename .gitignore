@@ -91,3 +91,4 @@
 # Ignore database export files such as db.sql and db.sql.gz
 *.sql
 *.sql.gz
+/.drush-lock-update

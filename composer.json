@@ -68,7 +68,10 @@
             },
             "file-mapping": {
                 "[web-root]/sites/default/all.settings.php": "assets/all.settings.php"
-            }
+            },
+            "allowed-packages": [
+                "amazeeio/drupal_integrations"
+            ]
         },
         "installer-paths": {
             "web/core": [
