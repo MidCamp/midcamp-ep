@@ -55,9 +55,10 @@ Set up an account and ssh key for [Amazee.io Lagoon](https://dashboard.amazeeio.
    ddev start
    ```
 
-3. **Install Composer dependencies**
+3. **Install Composer dependencies** Restarting DDEV ensures that `settings.php` gets updated with DDEV includes.
    ```bash
    ddev composer install
+   ddev restart
    ```
 
 4. **Install the site from the Lagoon remote**
@@ -72,7 +73,7 @@ Set up an account and ssh key for [Amazee.io Lagoon](https://dashboard.amazeeio.
    ```bash
    ddev launch
    ```
-   
+
    Default URL: `https://midcamp-ep.ddev.site`
 
 ---
