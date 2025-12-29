@@ -4,7 +4,7 @@ langcode: en
 uuid: 3e848321-e04d-4af4-bec7-7111b5061edf
 name: MidCamp
 mail: info@midcamp.org
-slogan: "We're better than Florida."
+slogan: 'The Midwest Drupal Camp, in Chicago.'
 page:
   403: ''
   404: ''
