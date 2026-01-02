@@ -1,0 +1,7 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/midcamp_tweaks.css: {}
+  dependencies:
+    - event_horizon/global-styling

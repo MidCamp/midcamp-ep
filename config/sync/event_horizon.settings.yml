@@ -18,7 +18,7 @@ graphic:
   path: 'public://noun-cloud-gate-26462.svg'
   use_default: false
 texture:
-  path: 'public://chicago-skyline.webp'
+  path: themes/custom/midcamp_event_horizon/images/chicago-skyline.webp
   use_default: false
 video:
   path: 'public://midcamp-2025-highlights.webm'
@@ -28,7 +28,7 @@ video_poster:
 default_graphic: false
 graphic_path: 'public://noun-cloud-gate-26462.svg'
 default_texture: false
-texture_path: 'public://chicago-skyline.webp'
+texture_path: themes/custom/midcamp_event_horizon/images/chicago-skyline.webp
 default_video: false
 video_path: 'public://midcamp-2025-highlights.webm'
 video_poster_path: 'public://midcamp-2025-social.webp'
