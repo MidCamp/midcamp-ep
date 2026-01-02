@@ -1,0 +1,25 @@
+uuid: fe97ea3c-551f-4a76-b791-2cf2acd27be2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:18f29b8f-46b6-460a-956f-d1c8a62925da'
+  module:
+    - block_content
+  theme:
+    - event_horizon
+id: event_horizon_midcampfooter
+theme: event_horizon
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:18f29b8f-46b6-460a-956f-d1c8a62925da'
+settings:
+  id: 'block_content:18f29b8f-46b6-460a-956f-d1c8a62925da'
+  label: 'MidCamp Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
