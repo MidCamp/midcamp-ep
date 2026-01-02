@@ -13,22 +13,22 @@ logo:
   path: themes/custom/midcamp_event_horizon/logo.svg
   use_default: false
 base_primary_color: '#953c96'
-base_secondary_color: '#0961a5'
+base_secondary_color: '#f5ef78'
 graphic:
-  path: null
-  use_default: true
+  path: 'public://noun-cloud-gate-26462.svg'
+  use_default: false
 texture:
-  path: null
-  use_default: true
+  path: themes/custom/midcamp_event_horizon/images/chicago-skyline.webp
+  use_default: false
 video:
-  path: null
-  use_default: true
+  path: 'public://midcamp-2025-highlights.webm'
+  use_default: false
 video_poster:
-  path: null
-default_graphic: true
-graphic_path: 'public://midcamp-drop-room-social.jpeg'
-default_texture: true
-texture_path: themes/custom/midcamp_event_horizon/images/crosshatch.svg
-default_video: true
-video_path: ''
-video_poster_path: themes/custom/midcamp_event_horizon/images/drop-room.jpg
+  path: 'public://midcamp-2025-social.webp'
+default_graphic: false
+graphic_path: 'public://noun-cloud-gate-26462.svg'
+default_texture: false
+texture_path: themes/custom/midcamp_event_horizon/images/chicago-skyline.webp
+default_video: false
+video_path: 'public://midcamp-2025-highlights.webm'
+video_poster_path: 'public://midcamp-2025-social.webp'

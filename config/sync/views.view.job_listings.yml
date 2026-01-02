@@ -452,6 +452,7 @@ display:
         title: Jobs
         description: ''
         weight: 50
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

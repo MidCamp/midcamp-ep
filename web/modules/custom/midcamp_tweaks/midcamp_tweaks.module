@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for MidCamp tweaks module.
+ */
+
+/**
+ * Attaches the MidCamp global styling when the Event Horizon theme is active.
+ */
+function midcamp_tweaks_page_attachments(array &$attachments) {
+  $active_theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  if ($active_theme === 'event_horizon') {
+    $attachments['#attached']['library'][] = 'midcamp_tweaks/global-styling';
+  }
+}

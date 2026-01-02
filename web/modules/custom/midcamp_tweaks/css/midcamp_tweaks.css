@@ -1,0 +1,34 @@
+h1.site-hero__title[class] {
+  text-transform: none;
+}
+
+@container (max-width: 699px) {
+  h1.site-hero__title[class] {
+    font-size: clamp(4rem, 2.5rem + 10vw, 19vw);
+  }
+
+  div.site-hero__container::after {
+    bottom: -56rem;
+  }
+}
+
+.view-frontpage {
+  .node__meta,
+  .feed-icons {
+    display: none;
+  }
+}
+
+.region--sidebar {
+  background-color: var(--color-white);
+  padding: 0 2rem 2rem;
+}
+
+.site-hero__media video {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.block-views-blockevent-sponsors-block-2 .block__title {
+  display: none;
+}

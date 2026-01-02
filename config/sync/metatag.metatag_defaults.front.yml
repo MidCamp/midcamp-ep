@@ -10,4 +10,4 @@ tags:
   canonical_url: '[site:url]'
   og_url: '[site:url]'
   shortlink: '[site:url]'
-  title: '[site:name] | [config_page:event_details:field_current:entity:field_dates] | [config_page:event_details:field_current:entity:field_location_short]'
+  title: '[site:name] | May 12-14, 2026 | [config_page:event_details:field_current:entity:field_location_short]'
