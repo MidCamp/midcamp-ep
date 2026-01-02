@@ -13,28 +13,23 @@ tasks:
 
   post-rollout:
     - run:
-        name: drush updb
+        name: drush deploy
         # This will only run if the database exists.
         command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
-        service: cli
-        shell: bash
-    # - run:
-    #     name: drush cim
-    #     # Enable once config sync has been setup.
-    #     command: drush -y cim
-    #     service: cli
-    #     shell: bash
-    - run:
-        name: drush cr
-        # This will only run if the database exists.
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cr; fi
+          if [[ $(drush status --field=Database) == "Connected" ]]; then drush deploy; fi
         service: cli
         shell: bash
 
 environments:
   main:
+    routes:
+      - nginx:
+        - "midcamp.org":
+            tls-acme: 'false'
+            insecure: Redirect
+        - "www.midcamp.org":
+            tls-acme: 'false'
+            insecure: Redirect
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
