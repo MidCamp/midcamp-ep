@@ -1,7 +1,7 @@
 langcode: en
 enable_globally: 0
 enable_globally_on_admin_routes: false
-default_challenge: friendlycaptcha/friendlycaptcha
+default_challenge: turnstile/Turnstile
 description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
 title: CAPTCHA
 administration_mode: false
