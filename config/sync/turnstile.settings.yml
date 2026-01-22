@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: 81xu-CnNysjK01ordcTN8eylPQLdhaN-P3ErYKgw3UM
+keys: turnstile_json
+testing_site_key: ''
+testing_secret_key: ''
+turnstile_src: 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+widget:
+  theme: auto
+  size: normal
+  tabindex: 0
+  language: auto
+  retry: auto
+  retry_interval: 8000
+  appearance: always
