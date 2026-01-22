@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - editoria11y
     - file
     - node
     - path
@@ -43,7 +44,9 @@ permissions:
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view the administration theme'

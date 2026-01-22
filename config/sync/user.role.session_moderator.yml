@@ -11,6 +11,7 @@ dependencies:
   module:
     - config_pages
     - content_moderation
+    - editoria11y
     - field_permissions
     - node
     - system
@@ -42,6 +43,7 @@ permissions:
   - 'edit field_time_slot'
   - 'edit terms in room'
   - 'edit terms in time_slot'
+  - 'mark as hidden in editoria11y'
   - 'use session_acceptance transition accept_session'
   - 'use session_acceptance transition confirm'
   - 'use session_acceptance transition decline'
@@ -50,6 +52,7 @@ permissions:
   - 'use session_acceptance transition waitlist'
   - 'view any unpublished content'
   - 'view bof revisions'
+  - 'view editoria11y checker'
   - 'view event_details config page entity'
   - 'view field_social_media_card'
   - 'view latest version'
