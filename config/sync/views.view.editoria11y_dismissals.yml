@@ -1074,8 +1074,6 @@ display:
     position: 1
     display_options:
       title: 'Recent Editoria11y Dismissals'
-      block_description: 'Editoria11y - Recent dismissals'
-      block_category: Editoria11y
       fields:
         page_path:
           id: page_path
@@ -1477,6 +1475,8 @@ display:
       link_display: dismissals__page
       link_url: ''
       display_extenders: {  }
+      block_description: 'Editoria11y - Recent dismissals'
+      block_category: Editoria11y
     cache_metadata:
       max-age: -1
       contexts:

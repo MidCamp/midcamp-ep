@@ -34,6 +34,7 @@
         "drupal/gin": "^5",
         "drupal/honeypot": "^2.1",
         "drupal/keysave": "^1.1",
+        "drupal/masquerade": "^2.0",
         "drupal/navigation_extra_tools": "^1.2",
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.10",
