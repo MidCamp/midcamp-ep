@@ -8,12 +8,13 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_event
     - field.field.node.article.field_image
+    - field.field.node.article.field_publish_to_planet_drupal
     - field.field.node.article.field_tags
     - image.style.wide
     - node.type.article
   module:
     - comment
-    - image
+    - svg_image
     - text
     - user
 _core:
@@ -49,6 +50,16 @@ content:
         attribute: eager
     third_party_settings: {  }
     weight: -1
+    region: content
+  field_publish_to_planet_drupal:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 112
     region: content
   field_tags:
     type: entity_reference_label

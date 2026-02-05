@@ -1,0 +1,23 @@
+uuid: 3f8fbe3d-8a7c-405e-9801-0ee3bbd40399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publish_to_planet_drupal
+    - node.type.article
+id: node.article.field_publish_to_planet_drupal
+field_name: field_publish_to_planet_drupal
+entity_type: node
+bundle: article
+label: 'Publish to Planet Drupal'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

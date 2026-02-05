@@ -33,16 +33,16 @@ environments:
       - nginx:
         - "dev.midcamp.org":
             tls-acme: 'false'
-            insecure: Redirect
+            insecure: Allow
   main:
     routes:
       - nginx:
         - "midcamp.org":
             tls-acme: 'false'
-            insecure: Redirect
+            insecure: Allow
         - "www.midcamp.org":
             tls-acme: 'false'
-            insecure: Redirect
+            insecure: Allow
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
