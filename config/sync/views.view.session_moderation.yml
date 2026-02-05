@@ -19,8 +19,6 @@ dependencies:
     - node
     - taxonomy
     - user
-    - webform
-    - webform_views
 _core:
   default_config_hash: AZFElCoRr1PjMyOBrD7wlTFclYW6QELXJbPDTl4HQBQ
 id: session_moderation
@@ -169,7 +167,7 @@ display:
           precision: 0
           decimal: .
           separator: ','
-          format_plural: false
+          format_plural: 0
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
@@ -1001,7 +999,7 @@ display:
           precision: 0
           decimal: .
           separator: ','
-          format_plural: false
+          format_plural: 0
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
@@ -1531,7 +1529,7 @@ display:
           precision: 0
           decimal: .
           separator: ','
-          format_plural: false
+          format_plural: 0
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
@@ -2061,7 +2059,7 @@ display:
           precision: 0
           decimal: .
           separator: ','
-          format_plural: false
+          format_plural: 0
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''

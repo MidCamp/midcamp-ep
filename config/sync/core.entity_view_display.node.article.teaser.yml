@@ -8,11 +8,12 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_event
     - field.field.node.article.field_image
+    - field.field.node.article.field_publish_to_planet_drupal
     - field.field.node.article.field_tags
     - image.style.medium
     - node.type.article
   module:
-    - image
+    - svg_image
     - text
     - user
 _core:
@@ -55,3 +56,4 @@ content:
 hidden:
   comment: true
   field_event: true
+  field_publish_to_planet_drupal: true

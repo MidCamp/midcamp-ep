@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
   module:
     - node
@@ -281,7 +280,7 @@ display:
         type: node_rss
         options:
           relationship: none
-          view_mode: rss
+          view_mode: default
       query:
         type: views_query
         options: {  }
