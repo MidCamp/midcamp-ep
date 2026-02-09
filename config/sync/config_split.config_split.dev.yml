@@ -1,0 +1,17 @@
+uuid: e978a87b-cbde-4faf-af05-2a697dd5c33a
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Config for all Lagoon dev environments.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/envs/dev
+module:
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

@@ -16,6 +16,7 @@ module:
   comment: 0
   config: 0
   config_pages: 0
+  config_split: 0
   contact: 0
   content_moderation: 0
   content_moderation_link: 0
@@ -67,6 +68,7 @@ module:
   inline_entity_form: 0
   key: 0
   keysave: 0
+  lagoon_logs: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -104,7 +106,6 @@ module:
   simple_sitemap: 0
   smart_date: 0
   smart_menu_links: 0
-  stage_file_proxy: 0
   storage: 0
   svg_image: 0
   system: 0

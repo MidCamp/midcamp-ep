@@ -14,6 +14,27 @@
 // folder outside this subfolder for an advanced security measure: '../config/sync'.
 $settings['config_sync_directory'] = '../config/sync';
 
+// Config splits configuration.
+// Enable local split in DDEV, dev split on non-prod Lagoon environments, and prod split on prod.
+if (getenv('IS_DDEV_PROJECT') === 'true') {
+  // Local DDEV environment: enable local split, disable dev and prod.
+  $config['config_split.config_split.local']['status'] = TRUE;
+  $config['config_split.config_split.dev']['status'] = FALSE;
+  $config['config_split.config_split.prod']['status'] = FALSE;
+} elseif (getenv('LAGOON')) {
+  if (getenv('LAGOON_ENVIRONMENT_TYPE') === 'production') {
+    // Production environment: enable prod split, disable dev and local.
+    $config['config_split.config_split.prod']['status'] = TRUE;
+    $config['config_split.config_split.dev']['status'] = FALSE;
+    $config['config_split.config_split.local']['status'] = FALSE;
+  } else {
+    // All other Lagoon environments (dev, staging, etc.): enable dev split, disable prod and local.
+    $config['config_split.config_split.dev']['status'] = TRUE;
+    $config['config_split.config_split.prod']['status'] = FALSE;
+    $config['config_split.config_split.local']['status'] = FALSE;
+  }
+}
+
 if (getenv('LAGOON_ENVIRONMENT_TYPE') !== 'main') {
     /**
      * Skip file system permissions hardening.
