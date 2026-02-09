@@ -1,0 +1,16 @@
+uuid: 700e762c-8d41-40b8-ac81-c0fe2901e0de
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: Prod
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/envs/prod
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
