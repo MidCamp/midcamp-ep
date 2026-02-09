@@ -342,7 +342,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'There are no sessions submitted that meet this criteria.'
+          content: "Session Submissions are now open!!!\r\nSubmit your session for consideration on the <a href=\"/node/add/session\">session submission page</a>.\r\n\r\n"
           tokenize: false
       sorts:
         field_when_value:

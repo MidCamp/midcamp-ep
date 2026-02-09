@@ -93,7 +93,6 @@ display:
           buttons: false
           action_title: Action
           clear_on_exposed: true
-          force_selection_info: false
           selected_actions:
             -
               action_id: 'eca_vbo_execute:accept_sessions'
@@ -110,6 +109,7 @@ display:
               preconfiguration:
                 message_override: ''
                 skip_confirm: 0
+          force_selection_info: false
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_session_evaluation_ratings

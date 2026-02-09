@@ -1,0 +1,18 @@
+uuid: 10710038-82a3-4d13-9e9c-29abe15c5999
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/envs/local
+module:
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list:
+  - system.performance
