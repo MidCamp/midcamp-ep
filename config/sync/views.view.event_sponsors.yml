@@ -12,10 +12,10 @@ dependencies:
     - taxonomy.vocabulary.event
   module:
     - add_content_by_bundle
-    - image
     - link
     - node
     - storage
+    - svg_image
     - taxonomy
     - user
 _core:

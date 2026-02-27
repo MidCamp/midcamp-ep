@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: _B3t1dLf32KHpzEnS3nyv1TAunfu8Nu2WKSMcIis91o
-name: 'Session Category'
+name: 'Topic Tracks'
 vid: session_category
-description: ''
-weight: 0
+description: null
+weight: -8
 new_revision: false

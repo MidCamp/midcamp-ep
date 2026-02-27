@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_event
     - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
+    - field.field.node.session.field_notes
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_short_description
@@ -16,11 +17,12 @@ dependencies:
     - field.field.node.session.field_time_slot
     - image.style.thumbnail
     - node.type.session
+    - workflows.workflow.session_acceptance
   module:
     - content_moderation
     - field_group
-    - image
     - maxlength
+    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -101,6 +103,14 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_notes:
+    type: string_textarea
+    weight: 51
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_r:
     type: options_select
     weight: 21
@@ -155,6 +165,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 7
@@ -179,6 +194,11 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

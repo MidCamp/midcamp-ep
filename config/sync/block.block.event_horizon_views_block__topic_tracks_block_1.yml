@@ -1,0 +1,29 @@
+uuid: 68e5fa50-7620-4e0a-aaba-3ffc312d890d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.topic_tracks
+  module:
+    - system
+    - views
+  theme:
+    - event_horizon
+id: event_horizon_views_block__topic_tracks_block_1
+theme: event_horizon
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:topic_tracks-block_1'
+settings:
+  id: 'views_block:topic_tracks-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events/2026/topic-tracks

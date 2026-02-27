@@ -7,5 +7,5 @@ _core:
 name: 'Session Time Slot'
 vid: time_slot
 description: ''
-weight: 0
+weight: -6
 new_revision: false

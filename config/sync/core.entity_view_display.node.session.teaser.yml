@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.session.field_event
     - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
+    - field.field.node.session.field_notes
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_short_description
@@ -69,11 +70,17 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  flag_my_schedule:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   field_description: true
   field_event: true
   field_is_non_session: true
   field_is_training: true
+  field_notes: true
   field_social_media_card: true
   field_time_slot: true
   links: true

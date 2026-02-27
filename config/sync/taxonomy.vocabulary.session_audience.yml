@@ -7,5 +7,5 @@ _core:
 name: 'Session Audience'
 vid: session_audience
 description: ''
-weight: 0
+weight: -9
 new_revision: false
