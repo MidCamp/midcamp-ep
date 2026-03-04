@@ -14,7 +14,7 @@ _core:
 id: event_horizon_views_block__job_listings_block_1
 theme: event_horizon
 region: content
-weight: -12
+weight: -14
 provider: null
 plugin: 'views_block:job_listings-block_1'
 settings:

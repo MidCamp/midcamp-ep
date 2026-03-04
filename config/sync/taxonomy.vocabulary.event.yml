@@ -7,5 +7,5 @@ _core:
 name: Event
 vid: event
 description: null
-weight: 0
+weight: -10
 new_revision: false

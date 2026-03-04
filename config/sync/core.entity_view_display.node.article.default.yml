@@ -29,7 +29,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   comment:
     type: comment_default
@@ -38,7 +38,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
+    weight: 4
     region: content
   field_image:
     type: image
@@ -48,18 +48,12 @@ content:
       image_style: wide
       image_loading:
         attribute: eager
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
-    weight: -1
-    region: content
-  field_publish_to_planet_drupal:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 112
+    weight: 0
     region: content
   field_tags:
     type: entity_reference_label
@@ -67,12 +61,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
   test:
     type: entity_reference_label
@@ -82,3 +76,4 @@ content:
     region: content
 hidden:
   field_event: true
+  field_publish_to_planet_drupal: true

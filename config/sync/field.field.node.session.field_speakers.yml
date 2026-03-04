@@ -29,6 +29,9 @@ settings:
       type: role
       role:
         speaker: speaker
+        organizer: organizer
+        content_editor: '0'
+        session_moderator: '0'
         administrator: '0'
     include_anonymous: false
 field_type: entity_reference
