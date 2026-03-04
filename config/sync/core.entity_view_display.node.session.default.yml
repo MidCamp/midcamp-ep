@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_event
+    - field.field.node.session.field_is_contribution_day
     - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
     - field.field.node.session.field_notes
@@ -46,6 +47,16 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_is_contribution_day:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_notes:
     type: basic_string
     label: above
@@ -57,7 +68,7 @@ content:
     type: entity_reference_label
     label: inline
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 3
     region: content

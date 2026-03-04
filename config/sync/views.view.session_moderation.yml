@@ -19,6 +19,8 @@ dependencies:
     - node
     - taxonomy
     - user
+    - webform
+    - webform_views
 _core:
   default_config_hash: AZFElCoRr1PjMyOBrD7wlTFclYW6QELXJbPDTl4HQBQ
 id: session_moderation
@@ -478,7 +480,7 @@ display:
           type: entity_reference_label
           settings:
             link: false
-          group_column: target_id
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -2546,6 +2548,18 @@ display:
           tokenize: false
       defaults:
         empty: false
+        header: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Total: @total'
       display_extenders:
         views_flag_refresh:
           flags: {  }

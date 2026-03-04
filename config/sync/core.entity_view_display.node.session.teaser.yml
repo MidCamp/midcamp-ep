@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_event
+    - field.field.node.session.field_is_contribution_day
     - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
     - field.field.node.session.field_notes
@@ -43,7 +44,7 @@ content:
     type: entity_reference_label
     label: inline
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 1
     region: content
@@ -78,6 +79,7 @@ content:
 hidden:
   field_description: true
   field_event: true
+  field_is_contribution_day: true
   field_is_non_session: true
   field_is_training: true
   field_notes: true

@@ -10,6 +10,7 @@ dependencies:
     - comment
     - contextual
     - editoria11y
+    - field_permissions
     - file
     - node
     - path
@@ -32,6 +33,7 @@ permissions:
   - 'administer redirects'
   - 'administer url aliases'
   - 'create article content'
+  - 'create field_is_contribution_day'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
@@ -40,13 +42,17 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit field_is_contribution_day'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own field_is_contribution_day'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'view all revisions'
   - 'view editoria11y checker'
+  - 'view field_is_contribution_day'
+  - 'view own field_is_contribution_day'
   - 'view own unpublished content'
   - 'view the administration theme'
