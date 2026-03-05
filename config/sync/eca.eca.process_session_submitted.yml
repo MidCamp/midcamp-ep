@@ -7,13 +7,17 @@ dependencies:
   module:
     - eca_base
     - eca_content
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:04cdb8cd7d0a44a790aed611de2a8643'
+    label: 'Send email on session creation'
 _core:
   default_config_hash: 70tCM8eUz5ukKaxIg5_c87Jabl6SHRrZc7SJFoUR5CI
 id: process_session_submitted
-modeller: bpmn_io
-label: 'Send email on session creation'
-version: ''
 weight: 3
+template: null
 events:
   Event_1rasplz:
     plugin: 'content_entity:insert'
@@ -28,8 +32,8 @@ conditions: {  }
 gateways: {  }
 actions:
   Activity_0nm31kg:
-    plugin: action_send_email_action
     label: 'Send email to author'
+    plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: 'Session "[node:title]" submitted to [eventName] [eventYear]'
@@ -50,8 +54,8 @@ actions:
       replace_tokens: true
     successors: {  }
   Activity_19fq9j3:
-    plugin: eca_token_set_value
     label: 'set eventName'
+    plugin: eca_token_set_value
     configuration:
       token_name: eventName
       token_value: '[config_page:event_details:field_event_name]'
@@ -61,8 +65,8 @@ actions:
         id: Activity_01uxs47
         condition: ''
   Activity_01uxs47:
-    plugin: eca_token_set_value
     label: 'set eventYear'
+    plugin: eca_token_set_value
     configuration:
       token_name: eventYear
       token_value: '[config_page:event_details:field_event_year]'

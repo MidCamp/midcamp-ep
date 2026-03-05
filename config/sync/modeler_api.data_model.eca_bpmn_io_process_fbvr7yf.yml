@@ -1,28 +1,19 @@
-uuid: 424ca78e-a782-40da-a0f5-19b98ca7975b
+uuid: 476461e2-6853-43e5-bf15-55012892db61
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.new_content_set_events
-_core:
-  default_config_hash: COr_Y2PPMZR6HIQ5YNi0f0lPqdQOzTnj9hYKaN5OIOY
-id: new_content_set_events
-label: 'New Room Content: Set Events'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_fbvr7yf
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="new_content_set_events" name="New Room Content: Set Events" isExecutable="true">
-      <bpmn2:startEvent id="Event_1jbs4wv" name="New Room" camunda:modelerTemplate="org.drupal.event.content_entity:create">
+    <bpmn2:process id="Process_fbvr7yF" name="New Sponsorship: Set Events" isExecutable="true">
+      <bpmn2:startEvent id="Event_1jbs4wv" name="New Sponsorship" camunda:modelerTemplate="org.drupal.event.content_entity:create">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="content_entity:create" />
           </camunda:properties>
           <camunda:field name="type">
-            <camunda:string>taxonomy_term room</camunda:string>
+            <camunda:string>storage sponsorship</camunda:string>
           </camunda:field>
         </bpmn2:extensionElements>
         <bpmn2:outgoing>Flow_1fv2eqt</bpmn2:outgoing>
@@ -59,11 +50,11 @@ modeldata: |
       <bpmn2:sequenceFlow id="Flow_1fv2eqt" sourceRef="Event_1jbs4wv" targetRef="Activity_13dscc6" />
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-c5097dbf-a76f-4d22-b4e6-cb4a68595d10">
-      <bpmndi:BPMNPlane id="sid-893031c4-ca02-41be-91d5-c16f0bac0f1d" bpmnElement="new_content_set_events">
+      <bpmndi:BPMNPlane id="sid-893031c4-ca02-41be-91d5-c16f0bac0f1d" bpmnElement="Process_fbvr7yF">
         <bpmndi:BPMNShape id="Event_1jbs4wv_di" bpmnElement="Event_1jbs4wv">
           <dc:Bounds x="172" y="122" width="36" height="36" />
           <bpmndi:BPMNLabel>
-            <dc:Bounds x="164" y="165" width="55" height="14" />
+            <dc:Bounds x="148" y="165" width="87" height="14" />
           </bpmndi:BPMNLabel>
         </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Activity_13dscc6_di" bpmnElement="Activity_13dscc6">

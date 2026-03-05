@@ -1,18 +1,9 @@
-uuid: 29bd4278-c465-4eaa-9671-210ada5f6089
+uuid: 680e3bdc-484b-4321-92e4-22812702ee75
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.process_populate_field_speakers
-_core:
-  default_config_hash: hUaZNDbu7kfEA7F4jDMpBiyDby4zJscbY7PxM7ja4D0
-id: process_populate_field_speakers
-label: 'Initially populate field_speakers when create a session'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_populate_field_speakers
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="Process_uzM9Eif" name="Initially populate field_speakers when create a session" isExecutable="true">

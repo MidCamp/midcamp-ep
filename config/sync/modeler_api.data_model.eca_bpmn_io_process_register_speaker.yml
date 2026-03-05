@@ -1,18 +1,9 @@
-uuid: f76ad480-cbbb-423e-9865-d59f178b4122
+uuid: cf74143c-baf2-414d-99ef-0d4b1ebc1894
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.process_register_speaker
-_core:
-  default_config_hash: 1FuRwPvGoOuawdgQZks6o9NJ6-868sJu1Gxs0wDZAgY
-id: process_register_speaker
-label: 'Apply speaker roles to new accounts'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_register_speaker
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="process_register_speaker" name="Apply speaker roles to new accounts" isExecutable="true">

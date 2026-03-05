@@ -1,28 +1,19 @@
-uuid: bd4484d2-3512-4b86-9bae-3430e9ac971a
+uuid: 76b5b8b8-51fc-4d92-a788-cd293c44e3f0
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.eca_vbo_accept
-_core:
-  default_config_hash: 9CFEeIJhkwZkXew-FtoVahwpRopuWCdGqaKzt5FqAus
-id: eca_vbo_accept
-label: 'Accept Sessions'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_eca_vbo_decline
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="eca_vbo_accept" name="Accept Sessions" isExecutable="true">
+    <bpmn2:process id="eca_vbo_decline" name="Decline Sessions" isExecutable="true">
       <bpmn2:startEvent id="Event_1kvnrp2" name="VBO" camunda:modelerTemplate="org.drupal.event.vbo:execute">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="vbo:execute" />
           </camunda:properties>
           <camunda:field name="operation_name">
-            <camunda:string>Accept sessions</camunda:string>
+            <camunda:string>Decline sessions</camunda:string>
           </camunda:field>
           <camunda:field name="view_id">
             <camunda:string></camunda:string>
@@ -33,13 +24,13 @@ modeldata: |
         </bpmn2:extensionElements>
         <bpmn2:outgoing>Flow_1uxb0gq</bpmn2:outgoing>
       </bpmn2:startEvent>
-      <bpmn2:task id="Activity_033mscy" name="Accept Sessions" camunda:modelerTemplate="org.drupal.action.eca_workflow_transition:session_acceptance">
+      <bpmn2:task id="Activity_033mscy" name="Decline Sessions" camunda:modelerTemplate="org.drupal.action.eca_workflow_transition:session_acceptance">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="eca_workflow_transition:session_acceptance" />
           </camunda:properties>
           <camunda:field name="new_state">
-            <camunda:string>accepted</camunda:string>
+            <camunda:string>rejected</camunda:string>
           </camunda:field>
           <camunda:field name="revision_log">
             <camunda:string></camunda:string>
@@ -57,7 +48,7 @@ modeldata: |
             <camunda:property name="pluginid" value="vbo:custom_access" />
           </camunda:properties>
           <camunda:field name="operation_name">
-            <camunda:string>Accept sessions</camunda:string>
+            <camunda:string>Decline sessions</camunda:string>
           </camunda:field>
           <camunda:field name="view_id">
             <camunda:string></camunda:string>
@@ -109,7 +100,7 @@ modeldata: |
       </bpmn2:sequenceFlow>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-52e415b9-8b05-4483-bd26-339d461b2dfc">
-      <bpmndi:BPMNPlane id="sid-66d99daa-db8d-41e5-8919-cde33512aaad" bpmnElement="eca_vbo_accept">
+      <bpmndi:BPMNPlane id="sid-66d99daa-db8d-41e5-8919-cde33512aaad" bpmnElement="Process_dm8tqoD">
         <bpmndi:BPMNShape id="Event_1kvnrp2_di" bpmnElement="Event_1kvnrp2">
           <dc:Bounds x="192" y="172" width="36" height="36" />
           <bpmndi:BPMNLabel>

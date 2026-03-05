@@ -8,13 +8,17 @@ dependencies:
     - storage.storage_type.sponsorship
   module:
     - eca_content
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:c8be83b02263c84ea387fc85bef5cda0'
+    label: 'New Sponsorship: Set Events'
 _core:
   default_config_hash: AmKk8z8FJ7t_nb1hJQSIj-FaZ5YEBrkIekK1G46MgsI
 id: process_fbvr7yf
-modeller: bpmn_io
-label: 'New Sponsorship: Set Events'
-version: ''
 weight: 0
+template: null
 events:
   Event_1jbs4wv:
     plugin: 'content_entity:create'
@@ -29,8 +33,8 @@ conditions: {  }
 gateways: {  }
 actions:
   Activity_13dscc6:
-    plugin: eca_set_field_value
     label: 'Set events'
+    plugin: eca_set_field_value
     configuration:
       field_name: field_events
       field_value: '[config_page:event_details:field_current:target_id]'

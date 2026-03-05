@@ -6,13 +6,13 @@ dependencies:
     - node.type.session
   module:
     - comment
+    - eca_views
     - node
-    - user
 id: my_submitted_sessions
-label: 'my submitted sessions'
+label: 'My Submitted Sessions'
 module: views
-description: ''
-tag: ''
+description: 'Private block for session user has submitted'
+tag: 'sessions, user-profile'
 base_table: node_field_data
 base_field: nid
 display:
@@ -120,9 +120,8 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: eca
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -216,14 +215,13 @@ display:
       footer: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }
   block_1:
     id: block_1
@@ -238,12 +236,11 @@ display:
       block_description: 'My submitted sessions'
       block_hide_empty: false
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags: {  }

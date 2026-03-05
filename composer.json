@@ -47,7 +47,8 @@
         "drupal/token": "^1.15",
         "drupal/turnstile": "^1.1",
         "drupal/views_flag_refresh": "^1.0",
-        "drush/drush": "^13.6"
+        "drush/drush": "^13.6",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -63,11 +64,17 @@
             "drupal/core-recipe-unpack": true,
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
     "extra": {
+        "merge-plugin": {
+          "include": [
+            "web/modules/contrib/webform/composer.libraries.json"
+          ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

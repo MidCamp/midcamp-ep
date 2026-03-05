@@ -1,18 +1,9 @@
-uuid: ff5a61d3-280a-4beb-84f6-435434682496
+uuid: 8effa0ff-b22a-4b36-acdb-03b6b7eb307b
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.process_session_submitted
-_core:
-  default_config_hash: fUN_dpjv3xh4AMeqkINzF9L4lS8t4CAV1PBdbdNFX8U
-id: process_session_submitted
-label: 'Send email on session creation'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_session_submitted
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="process_session_submitted" name="Send email on session creation" isExecutable="true">

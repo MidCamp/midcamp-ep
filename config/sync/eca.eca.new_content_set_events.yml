@@ -4,13 +4,17 @@ status: true
 dependencies:
   module:
     - eca_content
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:b7b9422314ac908b454771bda4ab2c71'
+    label: 'New Room Content: Set Events'
 _core:
   default_config_hash: JNmLlrmCB5i6hVmqprn_S-RamIB2_uLFRTMZLIoEm98
 id: new_content_set_events
-modeller: bpmn_io
-label: 'New Room Content: Set Events'
-version: ''
 weight: -3
+template: null
 events:
   Event_1jbs4wv:
     plugin: 'content_entity:create'
@@ -25,8 +29,8 @@ conditions: {  }
 gateways: {  }
 actions:
   Activity_13dscc6:
-    plugin: eca_set_field_value
     label: 'Set events'
+    plugin: eca_set_field_value
     configuration:
       field_name: field_events
       field_value: '[config_page:event_details:field_current:target_id]'

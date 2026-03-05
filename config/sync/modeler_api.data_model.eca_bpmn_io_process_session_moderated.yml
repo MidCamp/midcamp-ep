@@ -1,18 +1,9 @@
-uuid: 5871ac18-bc8d-4888-88ac-4f5666d4e61b
+uuid: b2f471aa-65c4-4f0a-a722-3ec3adb43565
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.process_session_moderated
-_core:
-  default_config_hash: jLQMgg93gEy866SG7vDzUNIL76uMPBmuG1maQF6dL6Y
-id: process_session_moderated
-label: 'Session transitions'
-tags:
-  - ''
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_session_moderated
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="process_session_moderated" name="Session transitions" isExecutable="true">

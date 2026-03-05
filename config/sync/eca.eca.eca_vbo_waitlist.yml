@@ -3,19 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - user.role.session_moderator
     - workflows.workflow.session_acceptance
   module:
     - eca_user
     - eca_vbo
     - eca_workflow
+    - modeler_api
     - views_bulk_operations
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:1daff76ad24b362588199dab006b7171'
+    label: 'Waitlist Sessions'
 _core:
   default_config_hash: ClCrfkJQCDbCZWS_qRuehbwCXmRL6pawbtN4uCPVwNY
 id: eca_vbo_waitlist
-modeller: bpmn_io
-label: 'Waitlist Sessions'
-version: ''
 weight: -6
+template: null
 events:
   Event_1slqcr2:
     plugin: 'vbo:execute'
@@ -57,16 +62,16 @@ conditions:
 gateways: {  }
 actions:
   Activity_1k6zhd3:
-    plugin: 'eca_workflow_transition:session_acceptance'
     label: 'Waitlist sessions'
+    plugin: 'eca_workflow_transition:session_acceptance'
     configuration:
       new_state: waitlisted
       revision_log: ''
       object: ''
     successors: {  }
   Activity_16048ju:
-    plugin: eca_vbo_set_custom_access
     label: 'yes'
+    plugin: eca_vbo_set_custom_access
     configuration:
       access_granted: true
     successors: {  }

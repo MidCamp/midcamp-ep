@@ -1,6 +1,6 @@
 adding:
-  js:
+  css:
     preprocess: false
 removing:
-  js:
+  css:
     preprocess: true
