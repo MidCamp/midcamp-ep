@@ -1,0 +1,128 @@
+uuid: c91f1eb8-0e63-46d7-852d-d57491e3360f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.my_submitted_sessions_block_access
+id: my_submitted_sessions_block_access
+label: 'My Submitted Sessions Block Access'
+tags:
+  - ''
+documentation: 'only allow users to view their own submissions'
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="my_submitted_sessions_block_access" name="My Submitted Sessions Block Access" isExecutable="true" camunda:versionTag="0.8">
+      <bpmn2:documentation>only allow users to view their own submissions</bpmn2:documentation>
+      <bpmn2:extensionElements />
+      <bpmn2:startEvent id="Event_1o9j1ho" name="viewing the my_submitted_sessions view" camunda:modelerTemplate="org.drupal.event.eca_views:access">
+        <bpmn2:documentation>a user is trying to access the my sunmitted sessions view</bpmn2:documentation>
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_views:access" />
+          </camunda:properties>
+          <camunda:field name="view_id">
+            <camunda:string>my_submitted_sessions</camunda:string>
+          </camunda:field>
+          <camunda:field name="display_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1b477k0</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:exclusiveGateway id="Gateway_0x0xihs" name="current user vs profile page user">
+        <bpmn2:extensionElements />
+        <bpmn2:incoming>Flow_1b477k0</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_04ic5j5</bpmn2:outgoing>
+        <bpmn2:outgoing>Flow_0w3mnsh</bpmn2:outgoing>
+      </bpmn2:exclusiveGateway>
+      <bpmn2:sequenceFlow id="Flow_1b477k0" name="starter flow" sourceRef="Event_1o9j1ho" targetRef="Gateway_0x0xihs" />
+      <bpmn2:task id="Activity_1ytg3ay" name="grant acess" camunda:modelerTemplate="org.drupal.action.eca_access_set_result">
+        <bpmn2:documentation>gives the user permission</bpmn2:documentation>
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_access_set_result" />
+          </camunda:properties>
+          <camunda:field name="access_result">
+            <camunda:string>allowed</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_04ic5j5</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_04ic5j5" name="user matches profile page" camunda:modelerTemplate="org.drupal.condition.eca_user_id" sourceRef="Gateway_0x0xihs" targetRef="Activity_1ytg3ay">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_user_id" />
+          </camunda:properties>
+          <camunda:field name="account">
+            <camunda:string>[session_user]</camunda:string>
+          </camunda:field>
+          <camunda:field name="user_id">
+            <camunda:string>[current-page:url:args:1]</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:task id="Activity_18z27zl" name="deny access" camunda:modelerTemplate="org.drupal.action.eca_access_set_result">
+        <bpmn2:documentation>denies permission to view the view</bpmn2:documentation>
+        <bpmn2:extensionElements>
+          <camunda:field name="access_result">
+            <camunda:string>forbidden</camunda:string>
+          </camunda:field>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_access_set_result" />
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0w3mnsh</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0w3mnsh" name="user does not match profile page" sourceRef="Gateway_0x0xihs" targetRef="Activity_18z27zl" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_my_submitted_sessions_block_access">
+      <bpmndi:BPMNPlane id="BPMNPlane_my_submitted_sessions_block_access" bpmnElement="my_submitted_sessions_block_access">
+        <bpmndi:BPMNShape id="Event_1o9j1ho_di" bpmnElement="Event_1o9j1ho">
+          <dc:Bounds x="57" y="52" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="33" y="95" width="87" height="40" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Gateway_0x0xihs_di" bpmnElement="Gateway_0x0xihs" isMarkerVisible="true">
+          <dc:Bounds x="200" y="45" width="50" height="50" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="184" y="95" width="82" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1ytg3ay_di" bpmnElement="Activity_1ytg3ay">
+          <dc:Bounds x="325" y="30" width="100" height="80" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_18z27zl_di" bpmnElement="Activity_18z27zl">
+          <dc:Bounds x="325" y="170" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1b477k0_di" bpmnElement="Flow_1b477k0">
+          <di:waypoint x="93" y="70" />
+          <di:waypoint x="200" y="70" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="120" y="52" width="54" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_04ic5j5_di" bpmnElement="Flow_04ic5j5">
+          <di:waypoint x="250" y="70" />
+          <di:waypoint x="325" y="70" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="253" y="52" width="70" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0w3mnsh_di" bpmnElement="Flow_0w3mnsh">
+          <di:waypoint x="225" y="95" />
+          <di:waypoint x="225" y="210" />
+          <di:waypoint x="325" y="210" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="206" y="150" width="70" height="40" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

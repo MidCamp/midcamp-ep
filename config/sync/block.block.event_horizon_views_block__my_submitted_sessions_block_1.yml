@@ -1,6 +1,6 @@
 uuid: 430e6b19-46f6-48ec-ab8b-15c52381aa19
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.my_submitted_sessions

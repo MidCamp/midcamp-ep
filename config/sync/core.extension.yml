@@ -9,6 +9,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
@@ -30,12 +31,15 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   eca: 0
+  eca_access: 0
   eca_base: 0
   eca_cache: 0
   eca_content: 0
   eca_log: 0
   eca_misc: 0
+  eca_modeller_bpmn: 0
   eca_tamper: 0
+  eca_ui: 0
   eca_user: 0
   eca_vbo: 0
   eca_views: 0
