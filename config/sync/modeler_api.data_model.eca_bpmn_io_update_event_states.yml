@@ -1,18 +1,9 @@
-uuid: 38970a7c-141b-4a85-a33f-6d2f57c7d1a2
+uuid: ea77d8dd-a532-403a-b036-26edda1ed3a0
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.update_event_states
-_core:
-  default_config_hash: NDlG7NeimXA_ieza-yw4eG05Y-5dMbjo_K1lp1KmT1U
-id: update_event_states
-label: 'Cron Update Event States'
-tags:
-  - ''
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_update_event_states
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="update_event_states" name="Cron Update Event States" isExecutable="true">

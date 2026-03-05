@@ -13,13 +13,17 @@ dependencies:
   module:
     - eca_content
     - eca_user
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:f7380e50f45bc395543c0cabee5808b1'
+    label: 'Session transitions'
 _core:
   default_config_hash: P-qH5Pki6ppeX0OxjWLMv8f0Cz9gGXnPkKm6KWrnPuI
 id: process_session_moderated
-modeller: bpmn_io
-label: 'Session transitions'
-version: ''
 weight: 2
+template: null
 events:
   Event_17jybve:
     plugin: 'content_entity:update'
@@ -35,87 +39,87 @@ conditions:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: proposed
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: originalentity
   Flow_1qvq53b:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: accepted
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: updatedentity
   Flow_1qr8wl6:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: rejected
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: updatedentity
   Flow_11p2189:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: waitlisted
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: updatedentity
   Flow_0xqozw2:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: waitlisted
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: originalentity
   Flow_07msu6w:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: accepted
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: updatedentity
   Flow_0mdwfyl:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: accepted
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: originalentity
   Flow_10un71b:
     plugin: eca_entity_field_value
     configuration:
       negate: false
-      case: false
       expected_value: declined
       field_name: moderation_state
       operator: equal
       type: value
+      case: false
       entity: updatedentity
 gateways: {  }
 actions:
   Activity_00cv6t2:
-    plugin: eca_token_load_entity
     label: "Load entity's old values"
+    plugin: eca_token_load_entity
     configuration:
       token_name: originalentity
       from: current
@@ -138,8 +142,8 @@ actions:
         id: Activity_160sfew
         condition: Flow_0mdwfyl
   Activity_0xfxpxt:
-    plugin: eca_token_load_entity
     label: "Load entity's new values"
+    plugin: eca_token_load_entity
     configuration:
       token_name: updatedentity
       from: current
@@ -162,8 +166,8 @@ actions:
         id: Activity_054ec8a
         condition: Flow_11p2189
   Activity_1b8cbnk:
-    plugin: action_send_email_action
     label: 'Send acceptance email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: '🎉 [node:title] Session Accepted at [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]'
@@ -191,8 +195,8 @@ actions:
         id: Activity_0ptj9ye
         condition: ''
   Activity_0k76xfu:
-    plugin: action_send_email_action
     label: 'Send rejection email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: '[config_page:event_details:field_event_name] Session, [node:title]'
@@ -215,22 +219,22 @@ actions:
         id: Activity_1yekubf
         condition: ''
   Activity_0ptj9ye:
-    plugin: action_message_action
     label: 'Display message'
+    plugin: action_message_action
     configuration:
-      replace_tokens: false
       message: 'Acceptance email has been sent to the author of the session.'
+      replace_tokens: false
     successors: {  }
   Activity_1cr12zx:
-    plugin: action_message_action
     label: 'Display message'
+    plugin: action_message_action
     configuration:
-      replace_tokens: false
       message: 'Rejection email has been sent to the author of the session.'
+      replace_tokens: false
     successors: {  }
   Activity_054ec8a:
-    plugin: action_send_email_action
     label: 'Send waitlist email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: '[config_page:event_details:field_event_name] Session, [node:title]'
@@ -254,15 +258,15 @@ actions:
         id: Activity_1jjhoas
         condition: ''
   Activity_1jjhoas:
-    plugin: action_message_action
     label: 'Display message'
+    plugin: action_message_action
     configuration:
-      replace_tokens: false
       message: 'Waitlist email has been sent to the author of the session.'
+      replace_tokens: false
     successors: {  }
   Activity_1mbs8yr:
-    plugin: eca_token_load_entity
     label: "Load entity's new values"
+    plugin: eca_token_load_entity
     configuration:
       token_name: updatedentity
       from: current
@@ -279,8 +283,8 @@ actions:
         id: Activity_1v73an9
         condition: Flow_07msu6w
   Activity_1v73an9:
-    plugin: action_send_email_action
     label: 'Send acceptance email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: '🎉 [node:title] Session Accepted at [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]'
@@ -300,15 +304,15 @@ actions:
         id: Activity_0eheffa
         condition: ''
   Activity_0eheffa:
-    plugin: action_message_action
     label: 'Display message'
+    plugin: action_message_action
     configuration:
-      replace_tokens: false
       message: 'Acceptance email has been sent to the author of the session.'
+      replace_tokens: false
     successors: {  }
   Activity_18r2swy:
-    plugin: eca_token_load_entity
     label: "Load entity's new values"
+    plugin: eca_token_load_entity
     configuration:
       token_name: updatedentity
       from: current
@@ -325,8 +329,8 @@ actions:
         id: Activity_1yekubf
         condition: Flow_10un71b
   Activity_1yekubf:
-    plugin: eca_set_field_value
     label: 'Clear room'
+    plugin: eca_set_field_value
     configuration:
       field_name: field_r
       field_value: ''
@@ -340,8 +344,8 @@ actions:
         id: Activity_0ey4hfy
         condition: ''
   Activity_0ey4hfy:
-    plugin: eca_set_field_value
     label: 'Clear time slot and save'
+    plugin: eca_set_field_value
     configuration:
       field_name: field_time_slot
       field_value: ''
@@ -355,8 +359,8 @@ actions:
         id: Activity_1rmghhp
         condition: ''
   Activity_1rmghhp:
-    plugin: action_send_email_action
     label: 'Notify site'
+    plugin: action_send_email_action
     configuration:
       recipient: '[site:mail]'
       subject: 'Session declined: [node:title]'
@@ -367,8 +371,8 @@ actions:
       replace_tokens: true
     successors: {  }
   Activity_160sfew:
-    plugin: eca_switch_account
     label: 'Switch to admin account'
+    plugin: eca_switch_account
     configuration:
       user_id: '1'
     successors:

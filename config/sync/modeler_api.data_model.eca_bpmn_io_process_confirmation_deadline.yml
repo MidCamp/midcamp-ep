@@ -1,18 +1,9 @@
-uuid: 1c36e043-00bc-4af3-8397-7a928dd2247f
+uuid: 8d45fb68-7724-4483-b3b0-a5689c77ff77
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.process_confirmation_deadline
-_core:
-  default_config_hash: cYKf0oDaONC3qw7Xe_rV-0EsQjRp292e4DqPTDpvWIw
-id: process_confirmation_deadline
-label: 'Confirmation deadline'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_process_confirmation_deadline
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="Process_confirmation_deadline" name="Confirmation deadline" isExecutable="true">

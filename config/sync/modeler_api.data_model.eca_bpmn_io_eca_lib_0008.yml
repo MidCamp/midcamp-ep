@@ -1,23 +1,9 @@
-uuid: 4ace2b11-8c88-4fe1-bdb1-3a5c37ccae76
+uuid: 9d137b55-68e5-465f-bdf5-13b73cb382a1
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.eca_lib_0008
-_core:
-  default_config_hash: CtIpH_TDS2SaaAoIhEV1u7RRurS6Bzr8BZAN7zkRMoM
-id: eca_lib_0008
-label: 'Redirect 403 to Login Page'
-tags:
-  - 'use case'
-  - redirect
-  - 'redirect 403'
-documentation: |-
-  This module redirects page requests, that would normally respond with a "403 Access denied" page, to the login form. Very much like the module "Redirect 403 To Login Page" which can be replaced with this model.
-
-  Note: this model requires ECA 1.2, or you need to apply the patch from https://www.drupal.org/project/eca/issues/3332859 if you want to use it on ECA 1.1
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_eca_lib_0008
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="eca_lib_0008" name="Redirect 403 to Login Page" isExecutable="true" camunda:versionTag="v1">

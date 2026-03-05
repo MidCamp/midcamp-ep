@@ -1,18 +1,9 @@
-uuid: a6cd8410-b8d2-4d88-8b5f-7d2a7e826a04
+uuid: 49bbaa2c-1bb5-415b-ac4c-b259ea4b9702
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.new_content_set_event
-_core:
-  default_config_hash: 486XmRqnAmY7yJAUiUAt4cVUWkcYvK4Aa6NHxHzRuqs
-id: new_content_set_event
-label: 'New Sessions Content: Set Event'
-tags:
-  - untagged
-documentation: ''
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_new_content_set_event
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="new_content_set_event" name="New Sessions Content: Set Event" isExecutable="true">

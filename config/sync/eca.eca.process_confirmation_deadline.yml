@@ -9,13 +9,17 @@ dependencies:
     - eca_content
     - eca_tamper
     - eca_views
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:53e3adea27cbdac1302825841d5ce5e8'
+    label: 'Confirmation deadline'
 _core:
   default_config_hash: LhxgWRbQ37PuBdMJIZfVdptJuOR7CJZc0c0jNKOtf3Q
 id: process_confirmation_deadline
-modeller: bpmn_io
-label: 'Confirmation deadline'
-version: ''
 weight: 0
+template: null
 events:
   Event_08if9ut:
     plugin: 'eca_base:eca_cron'
@@ -54,43 +58,43 @@ conditions:
     plugin: eca_scalar
     configuration:
       negate: false
-      case: false
       left: '[confirmation_deadline]'
       right: '[three_days]'
       operator: atmost
       type: value
+      case: false
   Flow_1p2qdnh:
     plugin: eca_scalar
     configuration:
       negate: false
-      case: false
       left: '[confirmation_deadline]'
       right: '[two_days]'
       operator: atleast
       type: value
+      case: false
   Flow_0kzmvb9:
     plugin: eca_scalar
     configuration:
       negate: false
-      case: false
       left: '[confirmation_deadline]'
       right: '[one_day]'
       operator: atmost
       type: value
+      case: false
   Flow_0mzma0w:
     plugin: eca_scalar
     configuration:
       negate: false
-      case: false
       left: '[confirmation_deadline]'
       right: '[now]'
       operator: atleast
       type: value
+      case: false
 gateways: {  }
 actions:
   Activity_0a3o6t5:
-    plugin: eca_token_set_value
     label: 'confirmation deadline'
+    plugin: eca_token_set_value
     configuration:
       token_name: confirmation_deadline
       token_value: '[config_page:event_details:field_current:entity:field_session_confirmation:date:raw]'
@@ -103,8 +107,8 @@ actions:
         id: Activity_0skweo7
         condition: ''
   Activity_0ysu5ih:
-    plugin: 'eca_tamper:strtotime'
     label: '2 days from now'
+    plugin: 'eca_tamper:strtotime'
     configuration:
       eca_data: '+2 days'
       eca_token_name: two_days
@@ -113,8 +117,8 @@ actions:
         id: Activity_18a9yrv
         condition: Flow_1p2qdnh
   Activity_1ier794:
-    plugin: 'eca_tamper:strtotime'
     label: '3 days from now'
+    plugin: 'eca_tamper:strtotime'
     configuration:
       eca_data: '+3 days'
       eca_token_name: three_days
@@ -123,8 +127,8 @@ actions:
         id: Activity_0ysu5ih
         condition: Flow_07l4tfg
   Activity_18a9yrv:
-    plugin: eca_views_query
     label: 'Get accepted sessions'
+    plugin: eca_views_query
     configuration:
       token_name: session
       view_id: sessions_by_state
@@ -135,8 +139,8 @@ actions:
         id: Activity_0m5pjz2
         condition: ''
   Activity_09mslgr:
-    plugin: action_send_email_action
     label: 'Send email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[entity:author:mail]'
       subject: 'A reminder about your accepted session [entity:title]'
@@ -151,16 +155,16 @@ actions:
       replace_tokens: true
     successors: {  }
   Activity_0m5pjz2:
-    plugin: eca_trigger_content_entity_custom_event
     label: Reminder
+    plugin: eca_trigger_content_entity_custom_event
     configuration:
       event_id: reminder
       tokens: ''
       object: session
     successors: {  }
   Activity_0skweo7:
-    plugin: 'eca_tamper:strtotime'
     label: '1 day from now'
+    plugin: 'eca_tamper:strtotime'
     configuration:
       eca_data: '+1 day'
       eca_token_name: one_day
@@ -169,8 +173,8 @@ actions:
         id: Activity_1tff4j4
         condition: Flow_0kzmvb9
   Activity_1tff4j4:
-    plugin: eca_token_set_value
     label: now
+    plugin: eca_token_set_value
     configuration:
       token_name: now
       token_value: '[date:raw]'
@@ -180,8 +184,8 @@ actions:
         id: Activity_0ruodlq
         condition: Flow_0mzma0w
   Activity_0ruodlq:
-    plugin: eca_views_query
     label: 'Get accepted sessions'
+    plugin: eca_views_query
     configuration:
       token_name: session
       view_id: sessions_by_state
@@ -192,16 +196,16 @@ actions:
         id: Activity_0iban3n
         condition: ''
   Activity_0iban3n:
-    plugin: eca_trigger_content_entity_custom_event
     label: 'Final Reminder'
+    plugin: eca_trigger_content_entity_custom_event
     configuration:
       event_id: final_reminder
       tokens: ''
       object: session
     successors: {  }
   Activity_1ivxvt4:
-    plugin: action_send_email_action
     label: 'Send email'
+    plugin: action_send_email_action
     configuration:
       recipient: '[entity:author:mail]'
       subject: 'Final reminder about your accepted session [entity:title]'

@@ -1,16 +1,9 @@
-uuid: c91f1eb8-0e63-46d7-852d-d57491e3360f
+uuid: 2aa89cc6-b578-4be6-a2a1-04840bb80021
 langcode: en
 status: true
-dependencies:
-  config:
-    - eca.eca.my_submitted_sessions_block_access
-id: my_submitted_sessions_block_access
-label: 'My Submitted Sessions Block Access'
-tags:
-  - ''
-documentation: 'only allow users to view their own submissions'
-filename: ''
-modeldata: |
+dependencies: {  }
+id: eca_bpmn_io_my_submitted_sessions_block_access
+data: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="my_submitted_sessions_block_access" name="My Submitted Sessions Block Access" isExecutable="true" camunda:versionTag="0.8">
