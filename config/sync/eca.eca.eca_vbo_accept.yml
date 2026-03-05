@@ -3,19 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - user.role.administrator
+    - user.role.session_moderator
     - workflows.workflow.session_acceptance
   module:
     - eca_user
     - eca_vbo
     - eca_workflow
+    - modeler_api
     - views_bulk_operations
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:1690f92cecf0d8461160b979402715d8'
+    label: 'Accept Sessions'
 _core:
   default_config_hash: hZt0_sRlk8rRaiTdEq2nV7qs-Aye5YNLWwebpEc4adU
 id: eca_vbo_accept
-modeller: bpmn_io
-label: 'Accept Sessions'
-version: ''
 weight: -7
+template: null
 events:
   Event_1kvnrp2:
     plugin: 'vbo:execute'
@@ -56,16 +62,16 @@ conditions:
 gateways: {  }
 actions:
   Activity_033mscy:
-    plugin: 'eca_workflow_transition:session_acceptance'
     label: 'Accept Sessions'
+    plugin: 'eca_workflow_transition:session_acceptance'
     configuration:
       new_state: accepted
       revision_log: ''
       object: ''
     successors: {  }
   Activity_0fk23mc:
-    plugin: eca_vbo_set_custom_access
     label: 'yes'
+    plugin: eca_vbo_set_custom_access
     configuration:
       access_granted: true
     successors: {  }

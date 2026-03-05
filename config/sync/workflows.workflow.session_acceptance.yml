@@ -103,6 +103,12 @@ type_settings:
         - waitlisted
       to: rejected
       weight: -1
+    reset_confirmed:
+      label: 'Reset Confirmed'
+      from:
+        - published
+      to: proposed
+      weight: 4
     waitlist:
       label: 'Waitlist Session'
       from:

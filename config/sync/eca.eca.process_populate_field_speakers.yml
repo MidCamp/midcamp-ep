@@ -8,13 +8,17 @@ dependencies:
     - node.type.session
   module:
     - eca_content
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:2a894e44790e0128813ea521692c5e50'
+    label: 'Initially populate field_speakers when create a session'
 _core:
   default_config_hash: q0KdGRh7H7G02omJz8EqyvpzJyBeA2xVfy5AB9PZvlo
 id: process_populate_field_speakers
-modeller: bpmn_io
-label: 'Initially populate field_speakers when create a session'
-version: ''
 weight: -10
+template: null
 events:
   Event_0wn5dd7:
     plugin: 'content_entity:create'
@@ -29,8 +33,8 @@ conditions: {  }
 gateways: {  }
 actions:
   Activity_0xy2j38:
-    plugin: eca_set_field_value
     label: 'Set speakers field to current user'
+    plugin: eca_set_field_value
     configuration:
       field_name: field_speakers
       field_value: '[user:uid]'

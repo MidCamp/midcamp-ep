@@ -3,19 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - user.role.administrator
+    - user.role.session_moderator
     - workflows.workflow.session_acceptance
   module:
     - eca_user
     - eca_vbo
     - eca_workflow
+    - modeler_api
     - views_bulk_operations
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    data: 'hash:015d05fd349f022d6b7585d9693573d6'
+    label: 'Decline Sessions'
 _core:
   default_config_hash: I7384_-Ubh_eluXykj_CCi6NhWgrLG1pUhIvvHuZ70Q
 id: eca_vbo_decline
-modeller: bpmn_io
-label: 'Decline Sessions'
-version: ''
 weight: -5
+template: null
 events:
   Event_1kvnrp2:
     plugin: 'vbo:execute'
@@ -56,16 +62,16 @@ conditions:
 gateways: {  }
 actions:
   Activity_033mscy:
-    plugin: 'eca_workflow_transition:session_acceptance'
     label: 'Decline Sessions'
+    plugin: 'eca_workflow_transition:session_acceptance'
     configuration:
       new_state: rejected
       revision_log: ''
       object: ''
     successors: {  }
   Activity_0fk23mc:
-    plugin: eca_vbo_set_custom_access
     label: 'yes'
+    plugin: eca_vbo_set_custom_access
     configuration:
       access_granted: true
     successors: {  }

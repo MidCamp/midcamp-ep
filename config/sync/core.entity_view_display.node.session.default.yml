@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.session.field_audience
     - field.field.node.session.field_description
     - field.field.node.session.field_event
+    - field.field.node.session.field_is_contribution_day
     - field.field.node.session.field_is_non_session
     - field.field.node.session.field_is_training
+    - field.field.node.session.field_notes
     - field.field.node.session.field_r
     - field.field.node.session.field_session_category
     - field.field.node.session.field_short_description
@@ -45,11 +47,28 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_is_contribution_day:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_notes:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_r:
     type: entity_reference_label
     label: inline
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 3
     region: content
@@ -68,6 +87,11 @@ content:
       link: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  flag_my_schedule:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   flippy_pager:
     settings: {  }

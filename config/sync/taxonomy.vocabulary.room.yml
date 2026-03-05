@@ -7,5 +7,5 @@ _core:
 name: 'Session Room'
 vid: room
 description: ''
-weight: 0
+weight: -7
 new_revision: false

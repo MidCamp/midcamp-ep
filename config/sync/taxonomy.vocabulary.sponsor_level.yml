@@ -7,5 +7,5 @@ _core:
 name: 'Sponsor Level'
 vid: sponsor_level
 description: ''
-weight: 0
+weight: -5
 new_revision: false

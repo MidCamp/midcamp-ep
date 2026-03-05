@@ -1,0 +1,9 @@
+uuid: de6ae21a-2e95-48c1-ab8a-6d842a827e4c
+langcode: en
+status: true
+dependencies: {  }
+id: organizer
+label: Organizer
+weight: 4
+is_admin: false
+permissions: {  }
