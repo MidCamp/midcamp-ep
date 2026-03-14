@@ -31,7 +31,7 @@ type_settings:
     proposed:
       label: Proposed
       weight: -4
-      published: true
+      published: false
       default_revision: true
     published:
       label: Confirmed
@@ -58,6 +58,12 @@ type_settings:
         - waitlisted
       to: accepted
       weight: -3
+    back_to_draft:
+      label: 'Back to Draft'
+      from:
+        - proposed
+      to: draft
+      weight: 5
     confirm:
       label: Confirm
       from:

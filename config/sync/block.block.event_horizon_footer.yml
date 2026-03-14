@@ -1,0 +1,25 @@
+uuid: 676c2b99-748b-45b7-a893-e92693c021db
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - event_horizon
+id: event_horizon_footer
+theme: event_horizon
+region: footer
+weight: -15
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

@@ -1,6 +1,9 @@
 _core:
   default_config_hash: xF-yd0bqa4S5zWER0Kasv-BK0-xGEegxnFERohs2QTs
 entity_type_groups:
+  media:
+    image:
+      open_graph: open_graph
   node:
     article:
       basic: basic
@@ -16,7 +19,6 @@ entity_type_groups:
       basic: basic
       open_graph: open_graph
       twitter_cards: twitter_cards
-      schema_person: schema_person
     job_listing:
       basic: basic
       open_graph: open_graph
@@ -45,8 +47,16 @@ entity_type_groups:
       schema_event: schema_event
 separator: ','
 tag_trim_method: beforeValue
-tag_trim_maxlength: {  }
-tag_scroll_max_height: ''
 use_maxlength: true
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: null
+  metatag_maxlength_abstract: null
+  metatag_maxlength_og_site_name: null
+  metatag_maxlength_og_title: null
+  metatag_maxlength_og_description: null
+  metatag_maxlength_twitter_cards_description: null
+  metatag_maxlength_twitter_cards_title: null
+tag_scroll_max_height: ''
 tag_trim_end: '|.,-:;/+&([{"'''
 trim_suffix: ''

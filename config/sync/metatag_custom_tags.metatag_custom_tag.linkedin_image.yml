@@ -1,0 +1,16 @@
+uuid: 34c3a16e-63ef-46f7-9bb4-53b7f7073e09
+langcode: en
+status: true
+dependencies: {  }
+id: linkedin_image
+label: 'LinkedIn Image'
+description: 'The image for Linkedin.'
+htmlElement: meta
+htmlValueAttribute: content
+attributes:
+  -
+    name: name
+    value: image
+  -
+    name: property
+    value: 'og:image'

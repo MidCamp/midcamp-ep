@@ -11,7 +11,7 @@ dependencies:
 id: event_horizon_midcampfooter
 theme: event_horizon
 region: footer
-weight: -13
+weight: -14
 provider: null
 plugin: 'block_content:18f29b8f-46b6-460a-956f-d1c8a62925da'
 settings:

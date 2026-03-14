@@ -15,9 +15,11 @@ dependencies:
     - field.field.node.session.field_short_description
     - field.field.node.session.field_social_media_card
     - field.field.node.session.field_speakers
+    - field.field.node.session.field_ticket_link
     - field.field.node.session.field_time_slot
     - node.type.session
   module:
+    - link
     - text
     - user
 _core:
@@ -47,22 +49,12 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_is_contribution_day:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 12
-    region: content
   field_notes:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 7
     region: content
   field_r:
     type: entity_reference_label
@@ -80,6 +72,18 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_ticket_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_time_slot:
     type: entity_reference_label
     label: inline
@@ -91,7 +95,7 @@ content:
   flag_my_schedule:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
   flippy_pager:
     settings: {  }
@@ -100,6 +104,7 @@ content:
     region: content
 hidden:
   field_event: true
+  field_is_contribution_day: true
   field_is_non_session: true
   field_is_training: true
   field_short_description: true
