@@ -16,6 +16,7 @@ module:
   coffee: 0
   comment: 0
   config: 0
+  config_normalizer: 0
   config_pages: 0
   config_split: 0
   contact: 0
