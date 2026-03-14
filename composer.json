@@ -28,6 +28,7 @@
         "drupal/dashboard": "^2",
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/editoria11y": "^2.2",
+        "drupal/element_class_formatter": "^2.1",
         "drupal/event_horizon": "^1.0@rc",
         "drupal/focal_point": "^2",
         "drupal/friendly_captcha_challenge": "^0.9",
