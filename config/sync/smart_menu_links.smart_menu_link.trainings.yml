@@ -9,13 +9,20 @@ label: Trainings
 link_text: Trainings
 link_suffix: trainings
 menu_name: main
-parent: 'smart_menu_links:schedule'
+parent: 'menu_link_content:01f41d4c-3120-400b-a245-48791c4a0d1d'
 weight: 0
 expanded: false
 enabled: true
 target_entity_type: taxonomy_term
 target_bundle: event
-moderation_states: {  }
+moderation_states:
+  draft: '0'
+  date: '0'
+  sessions_open: '0'
+  sessions_closed: '0'
+  scheduled: '0'
+  underway: '0'
+  published: '0'
 source_path_segment: 2
 source_id_or_name: name
 fallback: '[config_page:event_details:field_current:entity:tid]'

@@ -15,9 +15,11 @@ label: Speaker
 weight: 1
 is_admin: null
 permissions:
+  - 'create session content'
   - 'edit own session content'
   - 'use session_acceptance transition confirm'
   - 'use session_acceptance transition decline'
   - 'use session_acceptance transition edit_confirmed'
   - 'use session_acceptance transition propose_session'
+  - 'view latest version'
   - 'view session revisions'

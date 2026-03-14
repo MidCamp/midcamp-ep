@@ -11,7 +11,7 @@ _core:
 id: event_horizon_copyright
 theme: event_horizon
 region: footer
-weight: -11
+weight: -12
 provider: null
 plugin: event_platform_details_copyright
 settings:
