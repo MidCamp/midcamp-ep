@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8eba20f348a5e55852075e660b130f8c",
+    "content-hash": "3a7cb12c7b778c508b142108224427c6",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1634,6 +1634,87 @@
             }
         },
         {
+            "name": "drupal/config_normalizer",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_normalizer.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_normalizer-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "98916cdca633176698b62236a6f7b2d5e0c12e45"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1743088690",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nedjo Rogers (nedjo)",
+                    "homepage": "https://www.drupal.org/u/nedjo",
+                    "role": "Original author"
+                },
+                {
+                    "name": "Fabian Bircher (bircher)",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Benjamin Melançon (mlncn)",
+                    "homepage": "https://www.drupal.org/u/mlncn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Joe Parsons (joegraduate)",
+                    "homepage": "https://www.drupal.org/u/joegraduate",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "tadean",
+                    "homepage": "https://www.drupal.org/u/tadean",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Artem Dmitriiev (a.dmitriiev)",
+                    "homepage": "https://www.drupal.org/u/a.dmitriiev",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Merlin Axel Rutz (geek-merlin)",
+                    "homepage": "https://www.drupal.org/u/geek-merlin",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Campus Web Services The University of Arizona (uarizona)",
+                    "homepage": "https://www.drupal.org/u/uarizona",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Normalizes configuration for comparison.",
+            "homepage": "https://www.drupal.org/project/config_normalizer",
+            "support": {
+                "source": "https://git.drupal.org/project/config_normalizer.git",
+                "issues": "https://www.drupal.org/project/issues/config_normalizer"
+            }
+        },
+        {
             "name": "drupal/config_pages",
             "version": "2.19.0",
             "source": {
@@ -3164,6 +3245,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/editoria11y",
                 "issues": "https://drupal.org/project/issues/editoria11y"
+            }
+        },
+        {
+            "name": "drupal/element_class_formatter",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/element_class_formatter.git",
+                "reference": "2.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/element_class_formatter-2.1.2.zip",
+                "reference": "2.1.2",
+                "shasum": "1aba07a263f689fe771ca20ffeb758d6d8c0f3d6"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.2",
+                    "datestamp": "1721086883",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "rikki_iki",
+                    "homepage": "https://www.drupal.org/user/1068918"
+                }
+            ],
+            "description": "A field formatter which adds classes to various field elements.",
+            "homepage": "https://www.drupal.org/project/element_class_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/element_class_formatter"
             }
         },
         {
@@ -12254,6 +12387,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/config_normalizer": 10,
         "drupal/event_horizon": 5
     },
     "prefer-stable": true,

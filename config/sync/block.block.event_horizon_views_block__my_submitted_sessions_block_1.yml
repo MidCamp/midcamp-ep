@@ -19,7 +19,7 @@ plugin: 'views_block:my_submitted_sessions-block_1'
 settings:
   id: 'views_block:my_submitted_sessions-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
   items_per_page: null
