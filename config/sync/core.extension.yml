@@ -103,6 +103,7 @@ module:
   path_alias: 0
   redirect: 0
   redirect_404: 0
+  redirect_metrics: 0
   responsive_image: 0
   sam: 0
   schema_article: 0
