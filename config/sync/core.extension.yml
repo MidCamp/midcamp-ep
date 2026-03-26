@@ -47,6 +47,7 @@ module:
   eca_workflow: 0
   editor: 0
   editoria11y: 0
+  element_class_formatter: 0
   event_platform: 0
   event_platform_details: 0
   event_platform_flag: 0
