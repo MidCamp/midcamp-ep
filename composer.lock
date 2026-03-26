@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7cf7e92f56b71f5217295f63556e2ca",
+    "content-hash": "a1840379959c50c8a3952292e16ec902",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -5681,6 +5681,59 @@
             "homepage": "https://www.drupal.org/project/redirect",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect"
+            }
+        },
+        {
+            "name": "drupal/redirect_metrics",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/redirect_metrics.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect_metrics-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "05220c7deb5ae36626de57fdd01769c8f41db5eb"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/redirect": "*"
+            },
+            "require-dev": {
+                "drupal/redirect": "^1.9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1754108121",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mohit_aghera",
+                    "homepage": "https://www.drupal.org/user/639098"
+                },
+                {
+                    "name": "sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "Records statistics about redirects created by the redirect module.",
+            "homepage": "https://www.drupal.org/project/redirect_metrics",
+            "support": {
+                "source": "https://git.drupalcode.org/project/redirect_metrics",
+                "issues": "https://www.drupal.org/project/issues/redirect_metrics"
             }
         },
         {
