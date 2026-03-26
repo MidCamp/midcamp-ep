@@ -332,9 +332,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            session_moderator: session_moderator
+            administrator: administrator
+            organizer: organizer
       cache:
         type: tag
         options: {  }
@@ -902,7 +905,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.taxonomy_term.field_when'
@@ -1272,7 +1275,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_when'
         - 'config:workflow_list'
@@ -2195,7 +2198,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_audience'
         - 'config:field.storage.node.field_description'
@@ -2580,7 +2583,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.taxonomy_term.field_when'
@@ -2851,7 +2854,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.taxonomy_term.field_when'
@@ -3580,7 +3583,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_audience'
         - 'config:field.storage.node.field_session_category'
@@ -5267,7 +5270,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_audience'
         - 'config:field.storage.node.field_session_category'
@@ -6429,7 +6432,7 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_audience'
         - 'config:field.storage.node.field_description'

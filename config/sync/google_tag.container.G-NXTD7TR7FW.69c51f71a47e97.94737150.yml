@@ -1,0 +1,24 @@
+uuid: 30c0e40f-953e-4bf4-a115-2700e707a83c
+langcode: en
+status: true
+dependencies: {  }
+id: G-NXTD7TR7FW.69c51f71a47e97.94737150
+label: G-NXTD7TR7FW
+weight: 0
+tag_container_ids:
+  - G-NXTD7TR7FW
+advanced_settings:
+  consent_mode: true
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  login:
+    method: CMS
+  generate_lead:
+    value: ''
+    currency: ''
+  custom: {  }
+  webform_purchase: {  }
+  search: {  }
+  sign_up:
+    method: CMS
