@@ -12,6 +12,8 @@ module:
   bpmn_io: 0
   breakpoint: 0
   captcha: 0
+  charts: 0
+  charts_chartjs: 0
   ckeditor5: 0
   coffee: 0
   comment: 0
@@ -134,6 +136,7 @@ module:
   views_flag_refresh: 0
   views_summary_tabs: 0
   views_ui: 0
+  visitors: 0
   webform: 0
   webform_views: 0
   workflows: 0
