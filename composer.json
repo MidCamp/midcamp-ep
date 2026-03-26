@@ -50,6 +50,7 @@
         "drupal/token": "^1.15",
         "drupal/turnstile": "^1.1",
         "drupal/views_flag_refresh": "^1.0",
+        "drupal/visitors": "^2.32",
         "drush/drush": "^13.6",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
