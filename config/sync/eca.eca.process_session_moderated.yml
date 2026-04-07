@@ -17,7 +17,7 @@ dependencies:
 third_party_settings:
   modeler_api:
     modeler_id: bpmn_io
-    data: 'hash:f7380e50f45bc395543c0cabee5808b1'
+    data: 'hash:22b4a3050c91244aa754d4d03c61c6e6'
     label: 'Session transitions'
 _core:
   default_config_hash: P-qH5Pki6ppeX0OxjWLMv8f0Cz9gGXnPkKm6KWrnPuI
@@ -37,6 +37,7 @@ events:
 conditions:
   Flow_0lh9vvi:
     plugin: eca_entity_field_value
+    label: 'if was proposed'
     configuration:
       negate: false
       expected_value: proposed
@@ -47,6 +48,7 @@ conditions:
       entity: originalentity
   Flow_1qvq53b:
     plugin: eca_entity_field_value
+    label: 'if accepted'
     configuration:
       negate: false
       expected_value: accepted
@@ -57,6 +59,7 @@ conditions:
       entity: updatedentity
   Flow_1qr8wl6:
     plugin: eca_entity_field_value
+    label: 'if rejected'
     configuration:
       negate: false
       expected_value: rejected
@@ -67,6 +70,7 @@ conditions:
       entity: updatedentity
   Flow_11p2189:
     plugin: eca_entity_field_value
+    label: 'if waitlisted'
     configuration:
       negate: false
       expected_value: waitlisted
@@ -77,6 +81,7 @@ conditions:
       entity: updatedentity
   Flow_0xqozw2:
     plugin: eca_entity_field_value
+    label: 'if was waitlisted'
     configuration:
       negate: false
       expected_value: waitlisted
@@ -87,6 +92,7 @@ conditions:
       entity: originalentity
   Flow_07msu6w:
     plugin: eca_entity_field_value
+    label: 'if accepted'
     configuration:
       negate: false
       expected_value: accepted
@@ -97,6 +103,7 @@ conditions:
       entity: updatedentity
   Flow_0mdwfyl:
     plugin: eca_entity_field_value
+    label: 'if was accepted'
     configuration:
       negate: false
       expected_value: accepted
@@ -107,6 +114,7 @@ conditions:
       entity: originalentity
   Flow_10un71b:
     plugin: eca_entity_field_value
+    label: 'if declined'
     configuration:
       negate: false
       expected_value: declined
@@ -157,7 +165,7 @@ actions:
       object: ''
     successors:
       -
-        id: Activity_1b8cbnk
+        id: action_send_email_action_1b8cbnk
         condition: Flow_1qvq53b
       -
         id: Activity_0k76xfu
@@ -165,30 +173,39 @@ actions:
       -
         id: Activity_054ec8a
         condition: Flow_11p2189
-  Activity_1b8cbnk:
+  action_send_email_action_1b8cbnk:
     label: 'Send acceptance email'
     plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
       subject: '🎉 [node:title] Session Accepted at [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]'
       message: |-
-        Hello,
+        Hey [node:author:display-name]!
 
-        Congratulations! Your "[node:title]" session ([node:url]) was successfully accepted to [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session.
+        We would love to have you present your session, [node:title] at MidCamp 2026!
 
-        To confirm that you ARE able to present this session, please click the following link:
-        [node:moderation-link:published]
+        Please confirm your participation by Monday, April 13th.
+        To confirm that you ARE able to present this session, please click the following link: [node:moderation-link:published]
 
-        Conversely, if you are NOT able to present your session, please decline your session by clicking this link:
-        [node:moderation-link:declined]
+        Conversely, if you are NOT able to present your session, please decline your session by clicking this link: [node:moderation-link:declined]
 
-        Please let us know before [config_page:event_details:field_current:entity:field_session_confirmation:date:custom:l, F j|"we have to give your spot to someone else"].
+        Please do not discuss or promote your session until the session list is posted on midcamp.org as we need some time after confirmations to get the schedule finalized.
 
-        If you have questions or want to discuss this further, please reply to this email. You can find a speaker FAQ including important dates is available at [site:url]speaker-info.
+        Registration and website profile
+        As a speaker you (and any co-presenters) get a free ticket for registration. Once you have confirmed your session, we will send you a follow up email with a registration link. In the meantime, please login with your user profile on midcamp.org to add an avatar, and update your bio and other details.
 
-        Thanks again,
+        Speaker support
+        We truly want you to succeed as a speaker at MidCamp. Please consider reviewing the Speaker Resources page at https://www.midcamp.org/speaker-resources. If you need any help or want someone to review your slides, please reach out to us in the #speakers channel on https://mid.camp/slack.
 
-        The [config_page:event_details:field_event_name] planning team
+        Schedule
+        MidCamp sessions will be on Tuesday, May 12 and Wednesday, May 13. We will let you know of your session date and time as soon as we work out the schedule. If you have a schedule conflict on any of the session days, please let us know in your reply.
+
+        Accommodations
+        Visit our Travel https://www.midcamp.org/events/2026/travel-directions and Accommodations https://www.midcamp.org/events/2026/accommodations pages for more information on the venue and accommodations. Please let us know if you need any assistance with arrangements.
+
+        If you have questions or want to discuss this further, please reply to this email.
+        See you soon!
+        MidCamp 2026 Organizing Team
       replace_tokens: true
     successors:
       -
@@ -223,14 +240,12 @@ actions:
     plugin: action_message_action
     configuration:
       message: 'Acceptance email has been sent to the author of the session.'
-      replace_tokens: false
     successors: {  }
   Activity_1cr12zx:
     label: 'Display message'
     plugin: action_message_action
     configuration:
       message: 'Rejection email has been sent to the author of the session.'
-      replace_tokens: false
     successors: {  }
   Activity_054ec8a:
     label: 'Send waitlist email'
@@ -262,7 +277,6 @@ actions:
     plugin: action_message_action
     configuration:
       message: 'Waitlist email has been sent to the author of the session.'
-      replace_tokens: false
     successors: {  }
   Activity_1mbs8yr:
     label: "Load entity's new values"
@@ -308,7 +322,6 @@ actions:
     plugin: action_message_action
     configuration:
       message: 'Acceptance email has been sent to the author of the session.'
-      replace_tokens: false
     successors: {  }
   Activity_18r2swy:
     label: "Load entity's new values"

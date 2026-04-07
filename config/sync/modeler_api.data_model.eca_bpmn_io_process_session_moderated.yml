@@ -128,7 +128,7 @@ data: |
         <bpmn2:outgoing>Flow_1qr8wl6</bpmn2:outgoing>
         <bpmn2:outgoing>Flow_11p2189</bpmn2:outgoing>
       </bpmn2:task>
-      <bpmn2:task id="Activity_1b8cbnk" name="Send acceptance email" camunda:modelerTemplate="org.drupal.action.action_send_email_action">
+      <bpmn2:task id="action_send_email_action_1b8cbnk" name="Send acceptance email" camunda:modelerTemplate="org.drupal.action.action_send_email_action">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="action_send_email_action" />
@@ -140,24 +140,32 @@ data: |
             <camunda:string>🎉 [node:title] Session Accepted at [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]</camunda:string>
           </camunda:field>
           <camunda:field name="message">
-            <camunda:string>Hello,
+            <camunda:string>Hey [node:author:display-name]!
 
-  Congratulations! Your "[node:title]" session ([node:url]) was successfully accepted to [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]! Note that this email only goes to the author of the node, so please inform any additional speakers for this session.
+  We would love to have you present your session, [node:title] at MidCamp 2026!
 
-  To confirm that you ARE able to present this session, please click the following link:
-  [node:moderation-link:published]
+  Please confirm your participation by Monday, April 13th.
+  To confirm that you ARE able to present this session, please click the following link: [node:moderation-link:published]
 
-  Conversely, if you are NOT able to present your session, please decline your session by clicking this link:
-  [node:moderation-link:declined]
+  Conversely, if you are NOT able to present your session, please decline your session by clicking this link: [node:moderation-link:declined]
 
-  Please let us know before [config_page:event_details:field_current:entity:field_session_confirmation:date:custom:l, F j|"we have to give your spot to someone else"].
+  Please do not discuss or promote your session until the session list is posted on midcamp.org as we need some time after confirmations to get the schedule finalized.
 
-  If you have questions or want to discuss this further, please reply to this email. You can find a speaker FAQ including important dates is available at [site:url]speaker-info.
+  Registration and website profile
+  As a speaker you (and any co-presenters) get a free ticket for registration. Once you have confirmed your session, we will send you a follow up email with a registration link. In the meantime, please login with your user profile on midcamp.org to add an avatar, and update your bio and other details.
 
-  Thanks again,
+  Speaker support
+  We truly want you to succeed as a speaker at MidCamp. Please consider reviewing the Speaker Resources page at https://www.midcamp.org/speaker-resources. If you need any help or want someone to review your slides, please reach out to us in the #speakers channel on https://mid.camp/slack.
 
-  The [config_page:event_details:field_event_name] planning team
-  </camunda:string>
+  Schedule
+  MidCamp sessions will be on Tuesday, May 12 and Wednesday, May 13. We will let you know of your session date and time as soon as we work out the schedule. If you have a schedule conflict on any of the session days, please let us know in your reply.
+
+  Accommodations
+  Visit our Travel https://www.midcamp.org/events/2026/travel-directions and Accommodations https://www.midcamp.org/events/2026/accommodations pages for more information on the venue and accommodations. Please let us know if you need any assistance with arrangements.
+
+  If you have questions or want to discuss this further, please reply to this email.
+  See you soon!
+  MidCamp 2026 Organizing Team</camunda:string>
           </camunda:field>
           <camunda:field name="replace_tokens">
             <camunda:string>yes</camunda:string>
@@ -166,7 +174,7 @@ data: |
         <bpmn2:incoming>Flow_1qvq53b</bpmn2:incoming>
         <bpmn2:outgoing>Flow_0ji43go</bpmn2:outgoing>
       </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_1qvq53b" name="if accepted" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value" sourceRef="Activity_0xfxpxt" targetRef="Activity_1b8cbnk">
+      <bpmn2:sequenceFlow id="Flow_1qvq53b" name="if accepted" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value" sourceRef="Activity_0xfxpxt" targetRef="action_send_email_action_1b8cbnk">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="eca_entity_field_value" />
@@ -266,7 +274,7 @@ data: |
         </bpmn2:extensionElements>
         <bpmn2:incoming>Flow_0ji43go</bpmn2:incoming>
       </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_0ji43go" sourceRef="Activity_1b8cbnk" targetRef="Activity_0ptj9ye" />
+      <bpmn2:sequenceFlow id="Flow_0ji43go" sourceRef="action_send_email_action_1b8cbnk" targetRef="Activity_0ptj9ye" />
       <bpmn2:task id="Activity_1cr12zx" name="Display message" camunda:modelerTemplate="org.drupal.action.action_message_action">
         <bpmn2:extensionElements>
           <camunda:properties>
@@ -705,7 +713,7 @@ data: |
           <dc:Bounds x="800" y="150" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_1b8cbnk_di" bpmnElement="Activity_1b8cbnk">
+        <bpmndi:BPMNShape id="Activity_1b8cbnk_di" bpmnElement="action_send_email_action_1b8cbnk">
           <dc:Bounds x="990" y="150" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
