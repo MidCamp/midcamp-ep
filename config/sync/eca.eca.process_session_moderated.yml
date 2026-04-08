@@ -17,7 +17,7 @@ dependencies:
 third_party_settings:
   modeler_api:
     modeler_id: bpmn_io
-    data: 'hash:22b4a3050c91244aa754d4d03c61c6e6'
+    data: 'hash:399b0ac882c0e01766ef5c9b28071325'
     label: 'Session transitions'
 _core:
   default_config_hash: P-qH5Pki6ppeX0OxjWLMv8f0Cz9gGXnPkKm6KWrnPuI
@@ -35,7 +35,7 @@ events:
         id: Activity_00cv6t2
         condition: ''
 conditions:
-  Flow_0lh9vvi:
+  eca_entity_field_value_0lh9vvi:
     plugin: eca_entity_field_value
     label: 'if was proposed'
     configuration:
@@ -112,11 +112,22 @@ conditions:
       type: value
       case: false
       entity: originalentity
-  Flow_10un71b:
+  eca_entity_field_value_10un71b:
     plugin: eca_entity_field_value
     label: 'if declined'
     configuration:
       negate: false
+      expected_value: declined
+      field_name: moderation_state
+      operator: equal
+      type: value
+      case: false
+      entity: updatedentity
+  eca_entity_field_value_0u0o3ts:
+    plugin: eca_entity_field_value
+    label: 'Entity: compare field value'
+    configuration:
+      negate: true
       expected_value: declined
       field_name: moderation_state
       operator: equal
@@ -142,9 +153,9 @@ actions:
     successors:
       -
         id: Activity_0xfxpxt
-        condition: Flow_0lh9vvi
+        condition: eca_entity_field_value_0lh9vvi
       -
-        id: Activity_1mbs8yr
+        id: eca_token_load_entity_1mbs8yr
         condition: Flow_0xqozw2
       -
         id: Activity_160sfew
@@ -168,10 +179,10 @@ actions:
         id: action_send_email_action_1b8cbnk
         condition: Flow_1qvq53b
       -
-        id: Activity_0k76xfu
+        id: action_send_email_action_0k76xfu
         condition: Flow_1qr8wl6
       -
-        id: Activity_054ec8a
+        id: action_send_email_action_054ec8a
         condition: Flow_11p2189
   action_send_email_action_1b8cbnk:
     label: 'Send acceptance email'
@@ -211,29 +222,35 @@ actions:
       -
         id: Activity_0ptj9ye
         condition: ''
-  Activity_0k76xfu:
+  action_send_email_action_0k76xfu:
     label: 'Send rejection email'
     plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
-      subject: '[config_page:event_details:field_event_name] Session, [node:title]'
+      subject: 'Midcamp Session, [node:title]'
       message: |-
-        On behalf of our team, THANK YOU for submitting your "[node:title]" session to [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]. We are beyond grateful and appreciative.
+        Hello [node:author:display-name]
 
-        Unfortunately, we could not accept all of the excellent sessions that were submitted, and this session did not make this year's cut.
+        On behalf of our team, 
+        THANK YOU for submitting your "[node:title]" session to Midcamp 2026. 
+        We are beyond grateful and appreciative.
 
-        Nevertheless, we still hope to see you in [config_page:event_details:field_event_location_short] this year. Please reach out and let us know if you have any questions.
+        Unfortunately, we could not accept all of the excellent sessions,
+        and this session did not make this year's cut.
+
+        Nevertheless, we still hope to see you in Chicago this year.
+        Please reach out and let us know if you have any questions.
 
         Thanks again,
 
-        The [config_page:event_details:field_event_name] planning team
+        MidCamp 2026 Organizing Team
       replace_tokens: true
     successors:
       -
         id: Activity_1cr12zx
         condition: ''
       -
-        id: Activity_1yekubf
+        id: eca_set_field_value_1yekubf
         condition: ''
   Activity_0ptj9ye:
     label: 'Display message'
@@ -247,14 +264,14 @@ actions:
     configuration:
       message: 'Rejection email has been sent to the author of the session.'
     successors: {  }
-  Activity_054ec8a:
+  action_send_email_action_054ec8a:
     label: 'Send waitlist email'
     plugin: action_send_email_action
     configuration:
       recipient: '[node:author:mail]'
-      subject: '[config_page:event_details:field_event_name] Session, [node:title]'
+      subject: 'Midcamp 2026 Session, [node:title]'
       message: |-
-        On behalf of our team, THANK YOU for submitting your "[node:title]" session to [config_page:event_details:field_event_name] [config_page:event_details:field_event_year]. We are beyond grateful and appreciative.
+        On behalf of our team, THANK YOU for submitting your "[node:title]" session to Midcamp 2026. We are beyond grateful and appreciative.
 
         Unfortunately, we had to decline many great proposals — but we liked yours so much that we couldn’t let it go completely.
 
@@ -262,11 +279,11 @@ actions:
 
         Please inform us if you wish to remain on the waitlist up until the day of the event. Feel free to reach out with any questions.
 
-        Nevertheless, we still hope to see you in [config_page:event_details:field_event_location_short] this year. Please reach out and let us know if you have any questions.
+        Nevertheless, we still hope to see you in Chicago this year. Please reach out and let us know if you have any questions.
 
         Thanks again,
 
-        The [config_page:event_details:field_event_name] planning team
+         MidCamp 2026 Organizing Team
       replace_tokens: true
     successors:
       -
@@ -278,7 +295,7 @@ actions:
     configuration:
       message: 'Waitlist email has been sent to the author of the session.'
     successors: {  }
-  Activity_1mbs8yr:
+  eca_token_load_entity_1mbs8yr:
     label: "Load entity's new values"
     plugin: eca_token_load_entity
     configuration:
@@ -294,9 +311,9 @@ actions:
       object: ''
     successors:
       -
-        id: Activity_1v73an9
+        id: action_send_email_action_1v73an9
         condition: Flow_07msu6w
-  Activity_1v73an9:
+  action_send_email_action_1v73an9:
     label: 'Send acceptance email'
     plugin: action_send_email_action
     configuration:
@@ -315,15 +332,15 @@ actions:
       replace_tokens: true
     successors:
       -
-        id: Activity_0eheffa
+        id: action_message_action_0eheffa
         condition: ''
-  Activity_0eheffa:
+  action_message_action_0eheffa:
     label: 'Display message'
     plugin: action_message_action
     configuration:
       message: 'Acceptance email has been sent to the author of the session.'
     successors: {  }
-  Activity_18r2swy:
+  eca_token_load_entity_18r2swy:
     label: "Load entity's new values"
     plugin: eca_token_load_entity
     configuration:
@@ -339,9 +356,12 @@ actions:
       object: ''
     successors:
       -
-        id: Activity_1yekubf
-        condition: Flow_10un71b
-  Activity_1yekubf:
+        id: eca_set_field_value_1yekubf
+        condition: eca_entity_field_value_10un71b
+      -
+        id: action_send_email_action_0lnu5lx
+        condition: eca_entity_field_value_0u0o3ts
+  eca_set_field_value_1yekubf:
     label: 'Clear room'
     plugin: eca_set_field_value
     configuration:
@@ -369,10 +389,10 @@ actions:
       object: updatedentity
     successors:
       -
-        id: Activity_1rmghhp
+        id: action_send_email_action_1rmghhp
         condition: ''
-  Activity_1rmghhp:
-    label: 'Notify site'
+  action_send_email_action_1rmghhp:
+    label: 'Notify admins of decline'
     plugin: action_send_email_action
     configuration:
       recipient: '[site:mail]'
@@ -390,5 +410,16 @@ actions:
       user_id: '1'
     successors:
       -
-        id: Activity_18r2swy
+        id: eca_token_load_entity_18r2swy
         condition: ''
+  action_send_email_action_0lnu5lx:
+    label: 'Notify admins of confirmation'
+    plugin: action_send_email_action
+    configuration:
+      recipient: '[site:mail]'
+      subject: 'Session confirmed: [node:title]'
+      message: |-
+        User [node:author:account-name] confirmed their accepted session [node:title].
+
+        You can view the full session details at [node:edit-url]
+    successors: {  }
