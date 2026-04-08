@@ -346,6 +346,24 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: grid_responsive
+        options:
+          grouping:
+            -
+              field: field_level
+              rendered: true
+              rendered_strip: false
+          columns: 1
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: horizontal
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        style: false
+        row: false
       display_extenders:
         views_flag_refresh:
           flags: {  }
