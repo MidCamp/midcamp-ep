@@ -6,4 +6,6 @@ destination: ''
 entity_types:
   node: node
 moderation_states:
+  session_acceptance-declined: session_acceptance-declined
+  session_acceptance-published: session_acceptance-published
   editorial-published: editorial-published
