@@ -17,6 +17,7 @@
     "require": {
         "amazeeio/drupal_integrations": "^0.5.0",
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2.0",
         "drupal/captcha": "^2.0.7",
         "drupal/coffee": "^2",
         "drupal/config_normalizer": "^1.0@beta",
@@ -63,6 +64,7 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
@@ -75,6 +77,11 @@
         "sort-packages": true
     },
     "extra": {
+        "patches": {
+            "drupal/event_horizon": {
+              "Event Horizon's secondary menus inoperable when authenticated & BigPipe present": "patches/event_horizon-issue-3568876.patch"  
+            }
+        },
         "merge-plugin": {
           "include": [
             "web/modules/contrib/webform/composer.libraries.json"

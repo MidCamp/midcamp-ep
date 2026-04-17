@@ -1,0 +1,17 @@
+{
+    "_hash": "4bf2299c9774e40d62c69d83be5b901b07affcfa7f76ea374f8c3dc9c3c61583",
+    "patches": {
+        "drupal/event_horizon": [
+            {
+                "package": "drupal/event_horizon",
+                "description": "Event Horizon's secondary menus inoperable when authenticated & BigPipe present",
+                "url": "patches/event_horizon-issue-3568876.patch",
+                "sha256": "193a95a582ff2012efa9bac5f58c6bad00cdc12e3aa49a242b097086f1b8b53f",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
