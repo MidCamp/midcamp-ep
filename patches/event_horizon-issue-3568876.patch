@@ -1,0 +1,303 @@
+From c01b37c0e01bfc6d926686f014bfdb069188128c Mon Sep 17 00:00:00 2001
+From: Bernardo Martinez <49554-bernardm28@users.noreply.drupalcode.org>
+Date: Mon, 30 Mar 2026 19:21:52 +0000
+Subject: [PATCH] fixes bug with desktop and mobile nav
+
+---
+ components/site-header/js/navigation.js       |  34 +--
+ .../site-header/js/second-level-navigation.js | 201 ++++++++++--------
+ 2 files changed, 133 insertions(+), 102 deletions(-)
+
+diff --git a/components/site-header/js/navigation.js b/components/site-header/js/navigation.js
+index 87d1800..810a88b 100644
+--- a/components/site-header/js/navigation.js
++++ b/components/site-header/js/navigation.js
+@@ -137,23 +137,28 @@
+    * @prop {Drupal~behaviorAttach} attach
+    *   Attach context and settings for navigation.
+    */
+-  Drupal.behaviors.event_horizonNavigation = {
+-    attach(context) {
+-      // const navId = 'block-event-horizon-main-menu';
+-      const siteHeader = once('mobileNavigation', '.site-header', context).shift();
+-      const navWrapperId = 'block-event-horizon-main-menu';
+-
+-      if (siteHeader) {
+-        const navWrapper = siteHeader.querySelector(`#${navWrapperId}`);
+-        const { event_horizon } = Drupal;
+-        const navButton = context.querySelector(
++    Drupal.behaviors.event_horizonNavigation = {
++      attach(context) {
++        const navWrapperId = 'block-event-horizon-main-menu';
++        const siteHeader = document.querySelector('.site-header');
++        const navWrapper = document.getElementById(navWrapperId);
++        const navButton = document.querySelector(
+           '[data-drupal-selector="mobile-nav-button"]',
+         );
+-        const body = context.querySelector('body');
+-        const overlay = context.querySelector(
++        const body = document.body;
++        const overlay = document.querySelector(
+           '[data-drupal-selector="overlay"]',
+         );
+ 
++        if (!siteHeader || !navWrapper || !navButton || !overlay) return;
++
++        // Guard with once() on the navButton so init only fires once
++        // but only after all elements are confirmed present.
++        const [guardedButton] = once('mobileNavigation', navButton, context);
++        if (!guardedButton) return;
++
++        const { event_horizon } = Drupal;
++
+         init({
+           event_horizon,
+           siteHeader,
+@@ -163,7 +168,6 @@
+           body,
+           overlay,
+         });
+-      }
+-    },
+-  };
++      },
++    };
+ })(Drupal, once, tabbable);
+diff --git a/components/site-header/js/second-level-navigation.js b/components/site-header/js/second-level-navigation.js
+index 7e93368..7ac91fb 100644
+--- a/components/site-header/js/second-level-navigation.js
++++ b/components/site-header/js/second-level-navigation.js
+@@ -3,11 +3,13 @@
+  * Provides functionality for second level submenu navigation.
+  */
+ 
+-((Drupal) => {
++((Drupal, once) => {
+   const { isDesktopNav } = Drupal.event_horizon;
+-  const secondLevelNavMenus = document.querySelectorAll(
+-    '[data-drupal-selector="primary-nav-menu-item-has-children"]',
+-  );
++
++  /**
++   * NodeList of second level navigation <ul>'s.
++   */
++  let secondLevelNavMenus;
+ 
+   /**
+    * Shows and hides the specified menu item's second level submenu.
+@@ -39,17 +41,14 @@
+           ).classList.remove('is-active-menu-parent');
+         });
+       }
+-      button.setAttribute('aria-expanded', 'true');
+-      topLevelMenuItem
+-        .querySelector('[data-drupal-selector="primary-nav-menu--level-2"]')
+-        .classList.add('is-active-menu-parent');
+     } else {
+-      button.setAttribute('aria-expanded', 'false');
+       topLevelMenuItem.classList.remove('is-touch-event');
+-      topLevelMenuItem
+-        .querySelector('[data-drupal-selector="primary-nav-menu--level-2"]')
+-        .classList.remove('is-active-menu-parent');
+     }
++
++    button.setAttribute('aria-expanded', state);
++    topLevelMenuItem
++      .querySelector('[data-drupal-selector="primary-nav-menu--level-2"]')
++      .classList.toggle('is-active-menu-parent', state);
+   }
+ 
+   Drupal.event_horizon.toggleSubNav = toggleSubNav;
+@@ -74,59 +73,6 @@
+     }, 200);
+   }
+ 
+-  // Add event listeners onto each sub navigation parent and button.
+-  secondLevelNavMenus.forEach((el) => {
+-    const button = el.querySelector(
+-      '[data-drupal-selector="primary-nav-submenu-toggle-button"]',
+-    );
+-
+-    button.removeAttribute('aria-hidden');
+-    button.removeAttribute('tabindex');
+-
+-    // If touch event, prevent mouseover event from triggering the submenu.
+-    el.addEventListener(
+-      'touchstart',
+-      () => {
+-        el.classList.add('is-touch-event');
+-      },
+-      { passive: true },
+-    );
+-
+-    el.addEventListener('mouseover', () => {
+-      if (isDesktopNav() && !el.classList.contains('is-touch-event')) {
+-        el.classList.add('is-active-mouseover-event');
+-        toggleSubNav(el, true);
+-
+-        // Timeout is added to ensure that users of assistive devices (such as
+-        // mouse grid tools) do not simultaneously trigger both the mouseover
+-        // and click events. When these events are triggered together, the
+-        // submenu to appear to not open.
+-        setTimeout(() => {
+-          el.classList.remove('is-active-mouseover-event');
+-        }, 500);
+-      }
+-    });
+-
+-    button.addEventListener('click', () => {
+-      if (!el.classList.contains('is-active-mouseover-event')) {
+-        toggleSubNav(el);
+-      }
+-    });
+-
+-    el.addEventListener('mouseout', () => {
+-      if (
+-        isDesktopNav() &&
+-        !document.activeElement.matches(
+-          '[aria-expanded="true"], .is-active-menu-parent *',
+-        )
+-      ) {
+-        toggleSubNav(el, false);
+-      }
+-    });
+-
+-    el.addEventListener('blur', handleBlur, true);
+-  });
+-
+   /**
+    * Close all second level sub navigation menus.
+    */
+@@ -169,26 +115,107 @@
+ 
+   Drupal.event_horizon.areAnySubNavsOpen = areAnySubNavsOpen;
+ 
+-  // Ensure that desktop submenus close when escape key is pressed.
+-  document.addEventListener('keyup', (e) => {
+-    if (e.key === 'Escape') {
+-      if (isDesktopNav()) closeAllSubNav();
+-    }
+-  });
+-
+-  // If user taps outside of menu, close all menus.
+-  document.addEventListener(
+-    'touchstart',
+-    (e) => {
+-      if (
+-        areAnySubNavsOpen() &&
+-        !e.target.matches(
+-          '#block-event_horizon-main-menu, #block-event_horizon-main-menu *',
+-        )
+-      ) {
+-        closeAllSubNav();
+-      }
++  /**
++   * Initializes second level navigation behavior.
++   *
++   * @param {Element} navElement
++   *   The primary navigation menu element.
++   */
++  function init(navElement) {
++    secondLevelNavMenus = navElement.querySelectorAll(
++      '[data-drupal-selector="primary-nav-menu-item-has-children"]',
++    );
++
++    // Add event listeners onto each sub navigation parent and button.
++    secondLevelNavMenus.forEach((el) => {
++      const button = el.querySelector(
++        '[data-drupal-selector="primary-nav-submenu-toggle-button"]',
++      );
++
++      button.removeAttribute('aria-hidden');
++      button.removeAttribute('tabindex');
++
++      // If touch event, prevent mouseover event from triggering the submenu.
++      el.addEventListener(
++        'touchstart',
++        () => {
++          el.classList.add('is-touch-event');
++        },
++        { passive: true },
++      );
++
++      el.addEventListener('mouseover', () => {
++        if (isDesktopNav() && !el.classList.contains('is-touch-event')) {
++          el.classList.add('is-active-mouseover-event');
++          toggleSubNav(el, true);
++
++          setTimeout(() => {
++            el.classList.remove('is-active-mouseover-event');
++          }, 500);
++        }
++      });
++
++      button.addEventListener('click', () => {
++        if (!el.classList.contains('is-active-mouseover-event')) {
++          toggleSubNav(el);
++        }
++      });
++
++      el.addEventListener('mouseout', () => {
++        if (
++          isDesktopNav() &&
++          !document.activeElement.matches(
++            '[aria-expanded="true"], .is-active-menu-parent *',
++          )
++        ) {
++          toggleSubNav(el, false);
++        }
++      });
++
++      el.addEventListener('blur', handleBlur, true);
++    });
++
++    // Add document-level listeners only once to prevent duplication.
++    once('event-horizon-second-level-nav-document', document).forEach(() => {
++      // Ensure that desktop submenus close when escape key is pressed.
++      document.addEventListener('keyup', (e) => {
++        if (e.key === 'Escape') {
++          if (isDesktopNav()) closeAllSubNav();
++        }
++      });
++
++      // If user taps outside of menu, close all menus.
++      document.addEventListener(
++        'touchstart',
++        (e) => {
++          if (
++            areAnySubNavsOpen() &&
++            !e.target.matches(
++              '[data-drupal-selector="header-nav"], [data-drupal-selector="header-nav"] *, #block-event_horizon-main-menu, #block-event_horizon-main-menu *',
++            )
++          ) {
++            closeAllSubNav();
++          }
++        },
++        { passive: true },
++      );
++    });
++  }
++
++  /**
++   * Attaches the second level navigation behavior to the primary navigation list.
++   *
++   * @type {Drupal~behavior}
++   *
++   * @prop {Drupal~behaviorAttach} attach
++   */
++  Drupal.behaviors.secondLevelNav = {
++    attach(context) {
++      once(
++        'second-level-navigation',
++        '[data-drupal-selector="primary-nav-menu--level-1"]',
++        context,
++      ).forEach(init);
+     },
+-    { passive: true },
+-  );
+-})(Drupal);
++  };
++})(Drupal, once);
+-- 
+GitLab
+

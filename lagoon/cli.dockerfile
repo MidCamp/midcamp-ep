@@ -2,6 +2,7 @@ FROM uselagoon/php-8.3-cli-drupal:latest
 
 COPY composer.* /app/
 COPY assets /app/assets
+COPY patches /app/patches
 RUN composer install --no-dev
 COPY . /app
 RUN mkdir -p -v -m775 /app/web/sites/default/files
