@@ -771,6 +771,10 @@ display:
               field: field_when_1
               rendered: true
               rendered_strip: false
+            -
+              field: field_when
+              rendered: true
+              rendered_strip: false
           row_class: ''
           default_row_class: false
           uses_fields: true
