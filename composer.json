@@ -33,7 +33,7 @@
         "drupal/eca_modeller_bpmn": "^3.0",
         "drupal/editoria11y": "^2.2",
         "drupal/element_class_formatter": "^2.1",
-        "drupal/event_horizon": "*",
+        "drupal/event_horizon": "^2.0",
         "drupal/event_platform": "^2.0",
         "drupal/focal_point": "^2",
         "drupal/friendly_captcha_challenge": "^0.9",
