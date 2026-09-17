@@ -11,6 +11,7 @@ module:
   block_content: 0
   bpmn_io: 0
   breakpoint: 0
+  canvas: 0
   captcha: 0
   charts: 0
   charts_chartjs: 0
@@ -53,6 +54,7 @@ module:
   event_platform: 0
   event_platform_details: 0
   event_platform_flag: 0
+  event_platform_helper: 0
   event_platform_job_listings: 0
   event_platform_ratings: 0
   event_platform_scheduler: 0
@@ -154,4 +156,5 @@ theme:
   claro: 0
   event_horizon: 0
   gin: 0
+  canvas_stark: 0
 profile: standard

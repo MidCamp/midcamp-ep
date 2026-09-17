@@ -18,6 +18,7 @@
         "amazeeio/drupal_integrations": "^0.5.0",
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2.0",
+        "drupal/canvas": "^1.11",
         "drupal/captcha": "^2.0.7",
         "drupal/coffee": "^2",
         "drupal/config_normalizer": "^1.0@beta",
@@ -29,9 +30,11 @@
         "drupal/core-recommended": "^11.2",
         "drupal/dashboard": "^2",
         "drupal/easy_breadcrumb": "^2.0.9",
+        "drupal/eca_modeller_bpmn": "^3.0",
         "drupal/editoria11y": "^2.2",
         "drupal/element_class_formatter": "^2.1",
-        "drupal/event_horizon": "^1.0@rc",
+        "drupal/event_horizon": "*",
+        "drupal/event_platform": "^2.0",
         "drupal/focal_point": "^2",
         "drupal/friendly_captcha_challenge": "^0.9",
         "drupal/friendlycaptcha": "^1.1",
@@ -79,9 +82,6 @@
     },
     "extra": {
         "patches": {
-            "drupal/event_horizon": {
-              "Event Horizon's secondary menus inoperable when authenticated & BigPipe present": "patches/event_horizon-issue-3568876.patch"  
-            }
         },
         "merge-plugin": {
           "include": [

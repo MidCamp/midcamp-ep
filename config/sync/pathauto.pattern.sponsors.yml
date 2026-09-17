@@ -2,6 +2,8 @@ uuid: 39a16552-cdf8-4a26-9f67-3afb73501158
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.sponsor
   module:
     - node
 _core:
@@ -14,7 +16,6 @@ selection_criteria:
   b2826139-8aeb-449a-aeee-f677d1e5e145:
     id: 'entity_bundle:node'
     negate: false
-    uuid: b2826139-8aeb-449a-aeee-f677d1e5e145
     context_mapping:
       node: node
     bundles:

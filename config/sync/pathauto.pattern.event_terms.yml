@@ -2,6 +2,8 @@ uuid: f4791d06-8cd1-4ce1-a8e3-f9bc3e80b0dc
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.event
   module:
     - taxonomy
 _core:
@@ -14,7 +16,6 @@ selection_criteria:
   52d9b0dd-7c2c-4f97-bd2e-4ca8476dc83a:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 52d9b0dd-7c2c-4f97-bd2e-4ca8476dc83a
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
