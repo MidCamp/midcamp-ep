@@ -1,0 +1,25 @@
+uuid: 60b2da62-970a-40bf-8ea7-4dddb972248e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contrib_list
+  module:
+    - views
+active_version: b7c9a0d901717011
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_exposed_filter_block:contrib_list-block_2'
+        label: 'Exposed form: contrib_list-block_2'
+        label_display: '0'
+        provider: views
+        views_label: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Exposed form: contrib_list-block_2'
+id: block.views_exposed_filter_block.contrib_list-block_2
+provider: views
+source: block
+source_local_id: 'views_exposed_filter_block:contrib_list-block_2'

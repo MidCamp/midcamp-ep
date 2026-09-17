@@ -1,0 +1,22 @@
+uuid: 8817af4b-8cc6-48ff-b1d8-5e80b2f05bf1
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_platform_helper
+active_version: 7ebed0acee95d1e5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: event_platform_home_hero
+        label: 'Event Platform Homepage Hero'
+        label_display: '0'
+        provider: event_platform_helper
+    fallback_metadata:
+      slot_definitions: null
+label: 'Event Platform Homepage Hero'
+id: block.event_platform_home_hero
+provider: event_platform_helper
+source: block
+source_local_id: event_platform_home_hero

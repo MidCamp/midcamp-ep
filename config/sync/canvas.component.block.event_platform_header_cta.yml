@@ -1,0 +1,29 @@
+uuid: 69f102ac-0647-4e97-a1f6-a47e29e6ecc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_platform_helper
+active_version: 0b50ba6f231d4c8e
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: event_platform_header_cta
+        label: 'Event Platform Header CTA'
+        label_display: '0'
+        provider: event_platform_helper
+        default_state_link: ''
+        date_state_link: ''
+        sessions_open_state_link: ''
+        sessions_closed_state_link: ''
+        scheduled_state_link: ''
+        underway_state_link: ''
+        published_state_link: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Event Platform Header CTA'
+id: block.event_platform_header_cta
+provider: event_platform_helper
+source: block
+source_local_id: event_platform_header_cta

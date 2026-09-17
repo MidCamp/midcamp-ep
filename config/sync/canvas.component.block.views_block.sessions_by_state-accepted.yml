@@ -1,0 +1,27 @@
+uuid: cc780335-a21a-40cd-b28d-27dba1140566
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sessions_by_state
+  module:
+    - views
+active_version: c65720f2debda54f
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:sessions_by_state-accepted'
+        label: 'Sessions by State: Accepted'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Sessions by State: Accepted'
+id: block.views_block.sessions_by_state-accepted
+provider: views
+source: block
+source_local_id: 'views_block:sessions_by_state-accepted'
