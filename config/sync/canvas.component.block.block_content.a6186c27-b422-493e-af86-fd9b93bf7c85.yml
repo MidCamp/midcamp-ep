@@ -1,0 +1,25 @@
+uuid: bc7276ca-e52d-45ab-98db-f69c74e64b5d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:a6186c27-b422-493e-af86-fd9b93bf7c85'
+  module:
+    - block_content
+active_version: 156d09e81b4f175b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:a6186c27-b422-493e-af86-fd9b93bf7c85'
+        label: 'Unconference Footer'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Unconference Footer'
+id: block.block_content.a6186c27-b422-493e-af86-fd9b93bf7c85
+provider: block_content
+source: block
+source_local_id: 'block_content:a6186c27-b422-493e-af86-fd9b93bf7c85'

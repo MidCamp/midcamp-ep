@@ -1,0 +1,27 @@
+uuid: 201d98cd-5ef1-45ef-b380-39d02c717c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.topic_tracks
+  module:
+    - views
+active_version: fc01d8689500fd65
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:topic_tracks-block_1'
+        label: 'Topic Tracks'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Topic Tracks'
+id: block.views_block.topic_tracks-block_1
+provider: views
+source: block
+source_local_id: 'views_block:topic_tracks-block_1'

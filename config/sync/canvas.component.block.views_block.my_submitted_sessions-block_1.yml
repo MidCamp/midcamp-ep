@@ -1,0 +1,27 @@
+uuid: 48c250cb-f9f8-4f3f-bd49-c1c693440668
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_submitted_sessions
+  module:
+    - views
+active_version: 89b0bfe975695f84
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:my_submitted_sessions-block_1'
+        label: 'My submitted sessions'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'My submitted sessions'
+id: block.views_block.my_submitted_sessions-block_1
+provider: views
+source: block
+source_local_id: 'views_block:my_submitted_sessions-block_1'

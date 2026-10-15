@@ -1,0 +1,27 @@
+uuid: 572b454c-e709-4e57-a59e-2b67de7124c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.concurrent_sessions
+  module:
+    - views
+active_version: 529e58fa2b1e40fd
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:concurrent_sessions-block_1'
+        label: 'Concurrent Sessions'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Concurrent Sessions'
+id: block.views_block.concurrent_sessions-block_1
+provider: views
+source: block
+source_local_id: 'views_block:concurrent_sessions-block_1'

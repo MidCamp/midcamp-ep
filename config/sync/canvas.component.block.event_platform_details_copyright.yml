@@ -1,0 +1,22 @@
+uuid: 4dc6e980-4192-46b4-ac66-4f7bb6eb291d
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_platform_details
+active_version: 10a69d89caec9c69
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: event_platform_details_copyright
+        label: Copyright
+        label_display: '0'
+        provider: event_platform_details
+    fallback_metadata:
+      slot_definitions: null
+label: Copyright
+id: block.event_platform_details_copyright
+provider: event_platform_details
+source: block
+source_local_id: event_platform_details_copyright

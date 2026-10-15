@@ -1,0 +1,17 @@
+uuid: 4c548721-a8d2-4a17-9b71-3a622c34f9a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.event_horizon.card
+    - canvas.component.sdc.event_horizon.card-icon
+    - canvas.component.sdc.event_horizon.card-logo
+    - canvas.component.sdc.event_horizon.stat-card
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.event_horizon.card
+  - sdc.event_horizon.card-icon
+  - sdc.event_horizon.card-logo
+  - sdc.event_horizon.stat-card

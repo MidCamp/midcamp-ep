@@ -1,0 +1,25 @@
+uuid: 848bb0b6-1dbe-46f4-9401-6c57f1a73a65
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:18f29b8f-46b6-460a-956f-d1c8a62925da'
+  module:
+    - block_content
+active_version: 5d42ffacd702caac
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:18f29b8f-46b6-460a-956f-d1c8a62925da'
+        label: 'MidCamp Footer'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'MidCamp Footer'
+id: block.block_content.18f29b8f-46b6-460a-956f-d1c8a62925da
+provider: block_content
+source: block
+source_local_id: 'block_content:18f29b8f-46b6-460a-956f-d1c8a62925da'

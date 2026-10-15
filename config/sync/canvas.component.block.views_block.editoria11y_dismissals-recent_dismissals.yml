@@ -1,0 +1,27 @@
+uuid: b46af8cb-3977-4f37-8ea3-6927c92478c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.editoria11y_dismissals
+  module:
+    - views
+active_version: 0b98d1bdc643fa2a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:editoria11y_dismissals-recent_dismissals'
+        label: 'Editoria11y - Recent dismissals'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Editoria11y - Recent dismissals'
+id: block.views_block.editoria11y_dismissals-recent_dismissals
+provider: views
+source: block
+source_local_id: 'views_block:editoria11y_dismissals-recent_dismissals'

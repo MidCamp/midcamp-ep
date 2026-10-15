@@ -1,0 +1,15 @@
+uuid: f2428ab3-b212-4311-a35a-b4a77fc85b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.event_horizon.cta
+    - canvas.component.sdc.event_horizon.hero-billboard
+    - canvas.component.sdc.event_horizon.hero-side-by-side
+name: Hero
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.event_horizon.cta
+  - sdc.event_horizon.hero-billboard
+  - sdc.event_horizon.hero-side-by-side

@@ -1,0 +1,27 @@
+uuid: 3387d6a8-99ab-43ac-a3de-9bad62dfea85
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contrib_list
+  module:
+    - views
+active_version: 5bd08e277a4f5eaf
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:contrib_list-block_1'
+        label: 'Programs: Contrib Block'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Programs: Contrib Block'
+id: block.views_block.contrib_list-block_1
+provider: views
+source: block
+source_local_id: 'views_block:contrib_list-block_1'

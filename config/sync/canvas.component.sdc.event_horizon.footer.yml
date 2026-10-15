@@ -1,0 +1,37 @@
+uuid: 8f2f25bf-ca54-4bbd-b743-80b3e17e71e1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - event_horizon
+active_version: d696cea1796b650e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        align:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Branding & Social'
+        footer_last:
+          title: 'Call to action'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+label: Footer
+id: sdc.event_horizon.footer
+provider: event_horizon
+source: sdc
+source_local_id: 'event_horizon:footer'

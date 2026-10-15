@@ -1,0 +1,27 @@
+uuid: 9d2d507e-1d21-44cd-8657-f1494d7b127d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.terms_update
+  module:
+    - views
+active_version: d6a1152dc4ad93d9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:terms_update-complete'
+        label: 'Terms Update: Complete'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Terms Update: Complete'
+id: block.views_block.terms_update-complete
+provider: views
+source: block
+source_local_id: 'views_block:terms_update-complete'
