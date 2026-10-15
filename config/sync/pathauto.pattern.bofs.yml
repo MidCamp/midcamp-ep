@@ -2,8 +2,6 @@ uuid: 8ef09060-fa72-4d8d-935c-db3a3d24f44e
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.bof
   module:
     - node
 _core:
@@ -20,6 +18,7 @@ selection_criteria:
       node: node
     bundles:
       bof: bof
+    uuid: 2eb8d2d1-5b1b-4f7a-b205-7d851bd63309
 selection_logic: and
 weight: -5
 relationships: {  }

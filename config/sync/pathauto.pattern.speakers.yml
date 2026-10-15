@@ -2,8 +2,6 @@ uuid: 2e87c44e-3723-466a-bbed-cca58552271b
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.featured_speaker
   module:
     - node
 _core:
@@ -20,6 +18,7 @@ selection_criteria:
       node: node
     bundles:
       featured_speaker: featured_speaker
+    uuid: 025e1eb7-a5e4-4824-8744-1aea8061a592
 selection_logic: and
 weight: -5
 relationships: {  }

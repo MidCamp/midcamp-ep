@@ -116,7 +116,6 @@ actions:
       -
         id: Activity_18a9yrv
         condition: Flow_1p2qdnh
-    original_id: strtotime
   Activity_1ier794:
     label: '3 days from now'
     plugin: 'eca_tamper:strtotime'
@@ -127,7 +126,6 @@ actions:
       -
         id: Activity_0ysu5ih
         condition: Flow_07l4tfg
-    original_id: strtotime
   Activity_18a9yrv:
     label: 'Get accepted sessions'
     plugin: eca_views_query
@@ -174,7 +172,6 @@ actions:
       -
         id: Activity_1tff4j4
         condition: Flow_0kzmvb9
-    original_id: strtotime
   Activity_1tff4j4:
     label: now
     plugin: eca_token_set_value

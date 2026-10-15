@@ -2,8 +2,6 @@ uuid: bba04346-b821-40bc-bf70-a95871dfae0f
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.session
   module:
     - node
 _core:
@@ -20,6 +18,7 @@ selection_criteria:
       node: node
     bundles:
       session: session
+    uuid: 70efd00a-d598-452a-aacc-d4f61458cee5
 selection_logic: and
 weight: -5
 relationships: {  }

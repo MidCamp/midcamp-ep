@@ -2,8 +2,6 @@ uuid: 260ef28b-a375-4e4f-940c-9b35a36a4a5b
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.job_listing
   module:
     - node
 _core:
@@ -20,6 +18,7 @@ selection_criteria:
       node: node
     bundles:
       job_listing: job_listing
+    uuid: 4f1c929b-179c-47a9-8a98-ec8dd49af33e
 selection_logic: and
 weight: -5
 relationships: {  }
