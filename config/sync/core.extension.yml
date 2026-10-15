@@ -11,6 +11,7 @@ module:
   block_content: 0
   bpmn_io: 0
   breakpoint: 0
+  canvas: 0
   captcha: 0
   charts: 0
   charts_chartjs: 0
@@ -155,4 +156,5 @@ theme:
   claro: 0
   event_horizon: 0
   gin: 0
+  canvas_stark: 0
 profile: standard
