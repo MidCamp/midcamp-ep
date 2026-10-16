@@ -10,9 +10,9 @@ id: my_schedule
 label: 'My Schedule'
 bundles:
   - bof
+  - bof
+  - bof
   - session
-  - bof
-  - bof
 entity_type: node
 global: false
 flag_short: 'Add to my schedule'
