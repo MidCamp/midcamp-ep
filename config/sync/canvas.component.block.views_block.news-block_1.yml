@@ -1,0 +1,27 @@
+uuid: ae604404-8544-4c2e-b3af-7d67eb76823a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: 290512afab26945b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:news-block_1'
+        label: News
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: News
+id: block.views_block.news-block_1
+provider: views
+source: block
+source_local_id: 'views_block:news-block_1'

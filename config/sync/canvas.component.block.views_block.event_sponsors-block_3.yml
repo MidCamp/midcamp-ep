@@ -1,0 +1,27 @@
+uuid: 0a274efe-7084-4c81-8579-e0ca141a24e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_sponsors
+  module:
+    - views
+active_version: c798d29f9bb5c109
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:event_sponsors-block_3'
+        label: 'Event Sponsors: Event Horizon homepage'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Event Sponsors: Event Horizon homepage'
+id: block.views_block.event_sponsors-block_3
+provider: views
+source: block
+source_local_id: 'views_block:event_sponsors-block_3'

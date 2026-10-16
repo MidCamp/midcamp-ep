@@ -14,11 +14,11 @@ selection_criteria:
   70efd00a-d598-452a-aacc-d4f61458cee5:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 70efd00a-d598-452a-aacc-d4f61458cee5
     context_mapping:
       node: node
     bundles:
       session: session
+    uuid: 70efd00a-d598-452a-aacc-d4f61458cee5
 selection_logic: and
 weight: -5
 relationships: {  }

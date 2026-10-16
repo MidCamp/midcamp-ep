@@ -1,0 +1,15 @@
+uuid: abca31a6-b8c3-488a-a4f6-270907b6a477
+langcode: en
+status: true
+dependencies: {  }
+id: compact_date_only
+label: 'Compact Date Only'
+date_format: 'M d, Y'
+time_format: ''
+time_hour_format: ''
+allday_label: ''
+separator: ' - '
+join: ', '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '0'

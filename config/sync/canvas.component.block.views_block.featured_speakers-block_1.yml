@@ -1,0 +1,27 @@
+uuid: 4533eeb0-66e3-479d-85eb-9a77c9944c08
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_speakers
+  module:
+    - views
+active_version: ee72af536ec64f08
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:featured_speakers-block_1'
+        label: 'Featured Speakers'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Featured Speakers'
+id: block.views_block.featured_speakers-block_1
+provider: views
+source: block
+source_local_id: 'views_block:featured_speakers-block_1'

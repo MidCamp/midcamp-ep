@@ -14,11 +14,11 @@ selection_criteria:
   52d9b0dd-7c2c-4f97-bd2e-4ca8476dc83a:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 52d9b0dd-7c2c-4f97-bd2e-4ca8476dc83a
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
       event: event
+    uuid: 52d9b0dd-7c2c-4f97-bd2e-4ca8476dc83a
 selection_logic: and
 weight: -5
 relationships: {  }
