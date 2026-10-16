@@ -15,7 +15,7 @@ tags:
   image_src: 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
   'metatag_custom_tag:linkedin_image': 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
   og_image: 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
-  og_image_alt: '[site:name] May 12-14, 2026 - Purple Hatter Logo'
+  og_image_alt: '[site:name] [config_page:event_details:field_current:entity:field_dates:start_date:custom:M j]-[config_page:event_details:field_current:entity:field_dates:end_date:custom:j, Y] - Purple Hatter Logo'
   og_image_secure_url: 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
   og_image_type: image/png
   og_image_url: 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
@@ -56,6 +56,6 @@ tags:
   schema_web_site_type: WebSite
   schema_web_site_url: '[site:url]'
   shortlink: '[site:url]'
-  title: '[site:name] | May 12-14, 2026 | [config_page:event_details:field_current:entity:field_location_short]'
+  title: '[site:name] | [config_page:event_details:field_current:entity:field_dates:start_date:custom:M j]-[config_page:event_details:field_current:entity:field_dates:end_date:custom:j, Y] | [config_page:event_details:field_current:entity:field_location_short]'
   twitter_cards_image: 'https://www.midcamp.org/sites/default/files/2026-03/MidCamp_2026_Banner.png'
-  twitter_cards_image_alt: '[site:name] May 12-14, 2026 - Purple Hatter Logo'
+  twitter_cards_image_alt: '[site:name] [config_page:event_details:field_current:entity:field_dates:start_date:custom:M j]-[config_page:event_details:field_current:entity:field_dates:end_date:custom:j, Y] - Purple Hatter Logo'
