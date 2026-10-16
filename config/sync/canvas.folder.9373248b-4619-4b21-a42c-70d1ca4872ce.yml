@@ -1,0 +1,13 @@
+uuid: 9373248b-4619-4b21-a42c-70d1ca4872ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.block_content.18f29b8f-46b6-460a-956f-d1c8a62925da
+    - canvas.component.block.block_content.a6186c27-b422-493e-af86-fd9b93bf7c85
+name: 'Content block'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.block_content.18f29b8f-46b6-460a-956f-d1c8a62925da
+  - block.block_content.a6186c27-b422-493e-af86-fd9b93bf7c85

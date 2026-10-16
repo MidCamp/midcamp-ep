@@ -1,0 +1,21 @@
+uuid: 301cb66b-049a-4e53-a2a9-db022acfc4b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.event_horizon.accordion
+    - canvas.component.sdc.event_horizon.accordion-container
+    - canvas.component.sdc.event_horizon.footer
+    - canvas.component.sdc.event_horizon.group
+    - canvas.component.sdc.event_horizon.navbar
+    - canvas.component.sdc.event_horizon.section
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.event_horizon.accordion
+  - sdc.event_horizon.accordion-container
+  - sdc.event_horizon.footer
+  - sdc.event_horizon.group
+  - sdc.event_horizon.navbar
+  - sdc.event_horizon.section
