@@ -1,0 +1,57 @@
+uuid: 504414c5-40d6-4512-81be-b9b4e64fe9ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.comments_recent-block_1
+    - canvas.component.block.views_block.concurrent_sessions-block_1
+    - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.contrib_list-block_1
+    - canvas.component.block.views_block.contrib_list-block_2
+    - canvas.component.block.views_block.event_dates-block_1
+    - canvas.component.block.views_block.event_sponsors-block_1
+    - canvas.component.block.views_block.event_sponsors-block_2
+    - canvas.component.block.views_block.event_sponsors-block_3
+    - canvas.component.block.views_block.featured_speakers-block_1
+    - canvas.component.block.views_block.job_listings-block_1
+    - canvas.component.block.views_block.my_submitted_sessions-block_1
+    - canvas.component.block.views_block.news-block_1
+    - canvas.component.block.views_block.session_evaluation-block_1
+    - canvas.component.block.views_block.session_evaluation-block_2
+    - canvas.component.block.views_block.session_speakers-block_1
+    - canvas.component.block.views_block.sessions_by_state-accepted
+    - canvas.component.block.views_block.terms_update-close_for_sessions
+    - canvas.component.block.views_block.terms_update-complete
+    - canvas.component.block.views_block.terms_update-open_for_sessions
+    - canvas.component.block.views_block.terms_update-publish_schedule
+    - canvas.component.block.views_block.terms_update-underway
+    - canvas.component.block.views_block.topic_tracks-block_1
+    - canvas.component.block.views_block.who_s_online-who_s_online_block
+name: 'Lists (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.comments_recent-block_1
+  - block.views_block.concurrent_sessions-block_1
+  - block.views_block.content_recent-block_1
+  - block.views_block.contrib_list-block_1
+  - block.views_block.contrib_list-block_2
+  - block.views_block.event_dates-block_1
+  - block.views_block.event_sponsors-block_1
+  - block.views_block.event_sponsors-block_2
+  - block.views_block.event_sponsors-block_3
+  - block.views_block.featured_speakers-block_1
+  - block.views_block.job_listings-block_1
+  - block.views_block.my_submitted_sessions-block_1
+  - block.views_block.news-block_1
+  - block.views_block.session_evaluation-block_1
+  - block.views_block.session_evaluation-block_2
+  - block.views_block.session_speakers-block_1
+  - block.views_block.sessions_by_state-accepted
+  - block.views_block.terms_update-close_for_sessions
+  - block.views_block.terms_update-complete
+  - block.views_block.terms_update-open_for_sessions
+  - block.views_block.terms_update-publish_schedule
+  - block.views_block.terms_update-underway
+  - block.views_block.topic_tracks-block_1
+  - block.views_block.who_s_online-who_s_online_block

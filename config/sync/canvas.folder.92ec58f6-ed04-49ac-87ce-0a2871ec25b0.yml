@@ -1,0 +1,17 @@
+uuid: 92ec58f6-ed04-49ac-87ce-0a2871ec25b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.navigation.message
+    - canvas.component.sdc.navigation.title
+    - canvas.component.sdc.olivero.teaser
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - marker.page_content
+  - sdc.navigation.message
+  - sdc.navigation.title
+  - sdc.olivero.teaser
