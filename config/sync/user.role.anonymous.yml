@@ -7,7 +7,6 @@ dependencies:
     - storage.storage_type.sponsorship
   module:
     - comment
-    - contact
     - field_permissions
     - filter
     - media
@@ -23,7 +22,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
   - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
