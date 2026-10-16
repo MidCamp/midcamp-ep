@@ -1,0 +1,18 @@
+uuid: c0b58342-dfa4-4afa-8f75-7f5429e5a7d2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - event_horizon
+active_version: 8fe3be948e0194e1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Featured Speaker'
+id: sdc.event_horizon.featured-speaker
+provider: event_horizon
+source: sdc
+source_local_id: 'event_horizon:featured-speaker'

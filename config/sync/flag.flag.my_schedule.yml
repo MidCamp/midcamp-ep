@@ -12,9 +12,9 @@ bundles:
   - bof
   - session
   - bof
+  - bof
 entity_type: node
 global: false
-weight: 0
 flag_short: 'Add to my schedule'
 flag_long: ''
 flag_message: 'Added to my schedule'
@@ -22,6 +22,7 @@ unflag_short: 'Remove from my schedule'
 unflag_long: ''
 unflag_message: 'Removed from my schedule'
 unflag_denied_text: ''
+weight: 0
 flag_type: 'entity:node'
 link_type: ajax_link
 flagTypeConfig:

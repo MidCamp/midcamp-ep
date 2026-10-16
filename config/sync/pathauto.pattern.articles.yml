@@ -14,11 +14,11 @@ selection_criteria:
   cbddec55-9d15-4bae-be37-d58d28a0cd66:
     id: 'entity_bundle:node'
     negate: false
-    uuid: cbddec55-9d15-4bae-be37-d58d28a0cd66
     context_mapping:
       node: node
     bundles:
       article: article
+    uuid: cbddec55-9d15-4bae-be37-d58d28a0cd66
 selection_logic: and
 weight: -5
 relationships: {  }

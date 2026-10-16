@@ -1,0 +1,44 @@
+uuid: 299cc0ad-d37e-49ac-bf22-43f1184e8817
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - event_horizon
+active_version: 7d2cdaeca3752d68
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: rocket
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        icon_size:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Icon
+id: sdc.event_horizon.icon
+provider: event_horizon
+source: sdc
+source_local_id: 'event_horizon:icon'

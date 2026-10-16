@@ -1,0 +1,27 @@
+uuid: d4f47157-1587-459c-9f37-4a400d0515ef
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.comments_recent
+  module:
+    - views
+active_version: dd8d4209a5e3895a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:comments_recent-block_1'
+        label: 'Recent comments'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Recent comments'
+id: block.views_block.comments_recent-block_1
+provider: views
+source: block
+source_local_id: 'views_block:comments_recent-block_1'

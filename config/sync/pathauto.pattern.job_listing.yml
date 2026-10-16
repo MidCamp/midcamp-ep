@@ -14,11 +14,11 @@ selection_criteria:
   4f1c929b-179c-47a9-8a98-ec8dd49af33e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 4f1c929b-179c-47a9-8a98-ec8dd49af33e
     context_mapping:
       node: node
     bundles:
       job_listing: job_listing
+    uuid: 4f1c929b-179c-47a9-8a98-ec8dd49af33e
 selection_logic: and
 weight: -5
 relationships: {  }

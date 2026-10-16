@@ -14,11 +14,11 @@ selection_criteria:
   025e1eb7-a5e4-4824-8744-1aea8061a592:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 025e1eb7-a5e4-4824-8744-1aea8061a592
     context_mapping:
       node: node
     bundles:
       featured_speaker: featured_speaker
+    uuid: 025e1eb7-a5e4-4824-8744-1aea8061a592
 selection_logic: and
 weight: -5
 relationships: {  }

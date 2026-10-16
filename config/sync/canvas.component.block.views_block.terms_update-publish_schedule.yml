@@ -1,0 +1,27 @@
+uuid: 65f489dc-0e1b-4675-830b-f1a6abc33098
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.terms_update
+  module:
+    - views
+active_version: 79c86ec8bd7c0136
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:terms_update-publish_schedule'
+        label: 'Terms Update: Publish Schedule'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Terms Update: Publish Schedule'
+id: block.views_block.terms_update-publish_schedule
+provider: views
+source: block
+source_local_id: 'views_block:terms_update-publish_schedule'

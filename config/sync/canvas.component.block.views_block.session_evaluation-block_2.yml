@@ -1,0 +1,27 @@
+uuid: ea2c2788-3028-440b-9082-6fc8c33366f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_evaluation
+  module:
+    - views
+active_version: 66b51fd524d791f5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:session_evaluation-block_2'
+        label: 'Session Feedback'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Session Feedback'
+id: block.views_block.session_evaluation-block_2
+provider: views
+source: block
+source_local_id: 'views_block:session_evaluation-block_2'

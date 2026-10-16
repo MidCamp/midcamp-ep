@@ -14,11 +14,11 @@ selection_criteria:
   b2826139-8aeb-449a-aeee-f677d1e5e145:
     id: 'entity_bundle:node'
     negate: false
-    uuid: b2826139-8aeb-449a-aeee-f677d1e5e145
     context_mapping:
       node: node
     bundles:
       sponsor: sponsor
+    uuid: b2826139-8aeb-449a-aeee-f677d1e5e145
 selection_logic: and
 weight: -5
 relationships: {  }
