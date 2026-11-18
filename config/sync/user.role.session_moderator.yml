@@ -13,10 +13,10 @@ dependencies:
     - content_moderation
     - editoria11y
     - field_permissions
+    - navigation
     - node
     - system
     - taxonomy
-    - toolbar
 _core:
   default_config_hash: kb-Z1rMETMcTPcsKUD-ysYh-cXeqzCef_Sdi0YquGyU
 id: session_moderator
@@ -26,9 +26,9 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access navigation'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
-  - 'access toolbar'
   - 'access user profiles'
   - 'create field_is_contribution_day'
   - 'create field_is_hackathon'

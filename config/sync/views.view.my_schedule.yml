@@ -460,6 +460,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - session
         - url
         - user
         - 'user.node_grants:view'
@@ -631,9 +632,9 @@ display:
             argument: ''
           summary_options:
             base_path: ''
-            count: 0
-            override: 0
-            items_per_page: '25'
+            count: false
+            override: false
+            items_per_page: 25
             classes: 'tabs tabs--primary'
           summary:
             sort_order: asc
@@ -766,6 +767,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - session
         - url
         - user
         - 'user.node_grants:view'
@@ -979,6 +981,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - session
         - url
         - user
         - 'user.node_grants:view'
