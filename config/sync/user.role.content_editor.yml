@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.canvas_html_block
+    - filter.format.canvas_html_inline
     - filter.format.full_html
     - media.type.image
     - media.type.remote_video
@@ -27,6 +29,7 @@ dependencies:
     - taxonomy.vocabulary.time_slot
     - workflows.workflow.editorial
   module:
+    - canvas
     - comment
     - content_moderation
     - contextual
@@ -69,6 +72,7 @@ permissions:
   - 'administer url aliases'
   - 'create article content'
   - 'create bof content'
+  - 'create canvas_page'
   - 'create featured_speaker content'
   - 'create field_event'
   - 'create field_events'
@@ -102,6 +106,7 @@ permissions:
   - 'delete any session content'
   - 'delete any sponsor content'
   - 'delete article revisions'
+  - 'delete canvas_page'
   - 'delete own article content'
   - 'delete own bof content'
   - 'delete own featured_speaker content'
@@ -121,6 +126,7 @@ permissions:
   - 'edit any session content'
   - 'edit any sponsor content'
   - 'edit any svg_image media'
+  - 'edit canvas_page'
   - 'edit field_event'
   - 'edit field_events'
   - 'edit field_is_contribution_day'
@@ -168,6 +174,7 @@ permissions:
   - 'edit terms in tags'
   - 'edit terms in time_slot'
   - 'mark as hidden in editoria11y'
+  - 'publish auto-saves'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'use editorial transition archive'
@@ -176,6 +183,8 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use text format basic_html'
+  - 'use text format canvas_html_block'
+  - 'use text format canvas_html_inline'
   - 'use text format full_html'
   - 'view all revisions'
   - 'view any unpublished content'
