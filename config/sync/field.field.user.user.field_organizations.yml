@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.user.field_organizations
     - filter.format.basic_html
+    - filter.format.plain_text
   module:
     - text
     - user
@@ -21,4 +22,5 @@ default_value_callback: ''
 settings:
   allowed_formats:
     - basic_html
+    - plain_text
 field_type: text
