@@ -66,6 +66,15 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "scripts": {
+        "remove-install-php": "rm -f web/core/install.php",
+        "post-install-cmd": [
+            "@remove-install-php"
+        ],
+        "post-update-cmd": [
+            "@remove-install-php"
+        ]
+    },
     "config": {
         "allow-plugins": {
             "composer/installers": true,
