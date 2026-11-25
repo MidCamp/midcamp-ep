@@ -132,7 +132,6 @@ module:
   text: 0
   token: 0
   token_or: 0
-  toolbar: 0
   turnstile: 0
   update: 0
   user: 0

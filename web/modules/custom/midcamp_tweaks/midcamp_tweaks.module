@@ -13,5 +13,6 @@ function midcamp_tweaks_page_attachments(array &$attachments) {
 
   if ($active_theme === 'event_horizon') {
     $attachments['#attached']['library'][] = 'midcamp_tweaks/global-styling';
+    $attachments['#attached']['library'][] = 'midcamp_tweaks/hero-title-scroll';
   }
 }

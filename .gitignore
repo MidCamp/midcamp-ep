@@ -96,3 +96,5 @@
 # Lagoon stuff
 /web/sites/default/default.development.services.yml
 /web/sites/default/all.settings.php
+# Playwright CLI output (may contain credentials)
+.playwright-cli/

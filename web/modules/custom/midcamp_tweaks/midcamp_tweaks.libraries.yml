@@ -5,3 +5,11 @@ global-styling:
       css/midcamp_tweaks.css: {}
   dependencies:
     - event_horizon/global-styling
+
+hero-title-scroll:
+  version: 1.x
+  js:
+    js/hero-title-scroll.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

@@ -3,21 +3,49 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.canvas_html_block
+    - filter.format.canvas_html_inline
+    - filter.format.full_html
+    - media.type.image
+    - media.type.remote_video
+    - media.type.svg_image
     - node.type.article
+    - node.type.bof
+    - node.type.featured_speaker
+    - node.type.job_listing
     - node.type.page
+    - node.type.session
+    - node.type.sponsor
+    - storage.storage_type.cta
+    - storage.storage_type.sponsorship
+    - storage.storage_type.stat
+    - taxonomy.vocabulary.event
+    - taxonomy.vocabulary.room
+    - taxonomy.vocabulary.session_audience
+    - taxonomy.vocabulary.session_category
+    - taxonomy.vocabulary.sponsor_level
     - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.time_slot
+    - workflows.workflow.editorial
   module:
+    - canvas
     - comment
+    - content_moderation
     - contextual
     - editoria11y
     - field_permissions
+    - field_ui
     - file
+    - filter
+    - media
+    - navigation
     - node
     - path
     - redirect
+    - storage
     - system
     - taxonomy
-    - toolbar
 _core:
   default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
 id: content_editor
@@ -26,58 +54,173 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access content'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
-  - 'access toolbar'
+  - 'access navigation'
+  - 'administer media display'
+  - 'administer media form display'
+  - 'administer node display'
+  - 'administer node form display'
+  - 'administer node published status'
   - 'administer redirects'
+  - 'administer storage display'
+  - 'administer storage form display'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term form display'
   - 'administer url aliases'
   - 'create article content'
+  - 'create bof content'
+  - 'create canvas_page'
+  - 'create featured_speaker content'
+  - 'create field_event'
+  - 'create field_events'
   - 'create field_is_contribution_day'
   - 'create field_is_hackathon'
   - 'create field_is_non_session'
   - 'create field_is_social'
   - 'create field_is_training'
+  - 'create field_lead_events'
+  - 'create field_organize_events'
+  - 'create field_r'
   - 'create field_recording'
+  - 'create field_social_media_card'
+  - 'create field_ticket_link'
+  - 'create field_time_slot'
+  - 'create image media'
+  - 'create job_listing content'
+  - 'create media'
   - 'create page content'
+  - 'create remote_video media'
+  - 'create session content'
+  - 'create sponsor content'
+  - 'create svg_image media'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any article content'
+  - 'delete any bof content'
+  - 'delete any featured_speaker content'
+  - 'delete any job_listing content'
+  - 'delete any page content'
+  - 'delete any session content'
+  - 'delete any sponsor content'
   - 'delete article revisions'
+  - 'delete canvas_page'
   - 'delete own article content'
+  - 'delete own bof content'
+  - 'delete own featured_speaker content'
   - 'delete own files'
+  - 'delete own job_listing content'
   - 'delete own page content'
+  - 'delete own session content'
+  - 'delete own sponsor content'
   - 'delete page revisions'
+  - 'edit any article content'
+  - 'edit any bof content'
+  - 'edit any featured_speaker content'
+  - 'edit any image media'
+  - 'edit any job_listing content'
   - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any session content'
+  - 'edit any sponsor content'
+  - 'edit any svg_image media'
+  - 'edit canvas_page'
+  - 'edit field_event'
+  - 'edit field_events'
   - 'edit field_is_contribution_day'
   - 'edit field_is_hackathon'
   - 'edit field_is_non_session'
   - 'edit field_is_social'
   - 'edit field_is_training'
+  - 'edit field_lead_events'
+  - 'edit field_organize_events'
+  - 'edit field_r'
   - 'edit field_recording'
+  - 'edit field_social_media_card'
+  - 'edit field_ticket_link'
+  - 'edit field_time_slot'
   - 'edit own article content'
+  - 'edit own bof content'
   - 'edit own comments'
+  - 'edit own featured_speaker content'
+  - 'edit own field_event'
+  - 'edit own field_events'
   - 'edit own field_is_contribution_day'
   - 'edit own field_is_hackathon'
   - 'edit own field_is_non_session'
   - 'edit own field_is_social'
   - 'edit own field_is_training'
+  - 'edit own field_lead_events'
+  - 'edit own field_organize_events'
+  - 'edit own field_r'
   - 'edit own field_recording'
+  - 'edit own field_social_media_card'
+  - 'edit own field_ticket_link'
+  - 'edit own field_time_slot'
+  - 'edit own image media'
+  - 'edit own job_listing content'
   - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own session content'
+  - 'edit own sponsor content'
+  - 'edit own svg_image media'
+  - 'edit terms in event'
+  - 'edit terms in room'
+  - 'edit terms in session_audience'
+  - 'edit terms in session_category'
+  - 'edit terms in sponsor_level'
   - 'edit terms in tags'
+  - 'edit terms in time_slot'
   - 'mark as hidden in editoria11y'
+  - 'publish auto-saves'
   - 'revert all revisions'
+  - 'revert article revisions'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use text format basic_html'
+  - 'use text format canvas_html_block'
+  - 'use text format canvas_html_inline'
+  - 'use text format full_html'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
   - 'view editoria11y checker'
+  - 'view field_event'
+  - 'view field_events'
   - 'view field_is_contribution_day'
   - 'view field_is_hackathon'
   - 'view field_is_non_session'
   - 'view field_is_social'
   - 'view field_is_training'
+  - 'view field_lead_events'
+  - 'view field_organize_events'
+  - 'view field_r'
+  - 'view field_recording'
+  - 'view field_social_media_card'
+  - 'view field_ticket_link'
+  - 'view field_time_slot'
+  - 'view own field_event'
+  - 'view own field_events'
   - 'view own field_is_contribution_day'
   - 'view own field_is_hackathon'
   - 'view own field_is_non_session'
   - 'view own field_is_social'
   - 'view own field_is_training'
+  - 'view own field_lead_events'
+  - 'view own field_organize_events'
+  - 'view own field_r'
   - 'view own field_recording'
+  - 'view own field_social_media_card'
+  - 'view own field_ticket_link'
+  - 'view own field_time_slot'
   - 'view own unpublished content'
+  - 'view published cta storage entities'
+  - 'view published sponsorship storage entities'
+  - 'view published stat storage entities'
+  - 'view published storage entities'
   - 'view the administration theme'

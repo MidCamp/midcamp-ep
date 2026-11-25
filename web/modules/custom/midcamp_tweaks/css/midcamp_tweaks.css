@@ -1,10 +1,42 @@
 h1.site-hero__title[class] {
   text-transform: none;
+  /*
+   * The title is gradient text (background-clip: text), so glyphs only paint
+   * inside the element's box. With mixed case and line-height 0.85 the "p"
+   * descender and the trailing glyph overhang fall outside it. Extend the
+   * paint area with padding and offset it with margin so layout is unchanged.
+   */
+  padding-block-end: 0.25em;
+  margin-block-end: calc(var(--sp1-5) - 0.25em);
+  padding-inline-end: 0.1em;
+  margin-inline-end: -0.1em;
+
+  /* Mirrors the heading margin step-up in event_horizon's base.css. */
+  @container style(--md: true) {
+    margin-block-end: calc(var(--sp2) - 0.25em);
+  }
+
+  /*
+   * js/hero-title-scroll.js drives the fill in all browsers, so disable the
+   * theme's scroll-driven animation (only some browsers support it) and use
+   * the same background everywhere.
+   */
+  animation: none;
+  background:
+    linear-gradient(
+      to top,
+      black var(--hero-cover-percent),
+      var(--color-bright) var(--hero-cover-percent)
+    ),
+    var(--texture-path, black);
+  background-size: auto, cover;
+  background-clip: text;
 }
 
 @container (max-width: 699px) {
   h1.site-hero__title[class] {
-    font-size: clamp(4rem, 2.5rem + 10vw, 19vw);
+    /* Cap at 18vw so "MidCamp" fits a 320px-wide phone screen. */
+    font-size: clamp(2.5rem, 2.5rem + 10vw, 18vw);
   }
 
   div.site-hero__container::after {
